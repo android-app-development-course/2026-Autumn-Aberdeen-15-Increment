@@ -1,0 +1,1868 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Increment路演。"><title>Increment · 让理解，成为表达</title>
+
+  <style>
+    :root {
+      --bg: #f7f7f4;
+      --ink: #26251e;
+      --body: #5a5852;
+      --line: #e6e5e0;
+      --orange: #f54e00;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+      border: 1px solid #cfcdc4;
+      border-radius: 8px;
+      background: transparent;
+      color: var(--ink);
+      padding: 11px 17px;
+      font-size: 15px;
+    }
+
+    button:hover {
+      background: #e6e5e0;
+    }
+
+    button:focus-visible,
+    a:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid var(--orange);
+      outline-offset: 4px;
+    }
+
+    button:disabled {
+      opacity: 0.35;
+      cursor: default;
+    }
+
+    .primary {
+      background: var(--orange);
+      color: white;
+      border-color: var(--orange);
+    }
+
+    .primary:hover {
+      background: #d04200;
+    }
+
+    button[aria-pressed="true"] {
+      background: var(--ink);
+      color: var(--bg);
+    }
+
+    .text {
+      border: 0;
+      padding: 0 8px;
+      text-decoration: underline;
+      font-size: inherit;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    h2 {
+      font-size: clamp(32px, 4.1vw, 64px);
+      font-weight: 400;
+      line-height: 1.22;
+      letter-spacing: -0.045em;
+    }
+
+    h3 {
+      font-size: clamp(20px, 1.9vw, 29px);
+      font-weight: 500;
+      line-height: 1.4;
+      margin: 18px 0;
+    }
+
+    p {
+      font-size: clamp(17px, 1.5vw, 23px);
+      line-height: 1.7;
+      color: var(--body);
+    }
+
+    small,
+    .source {
+      font-size: 14px;
+      color: var(--body);
+      line-height: 1.65;
+    }
+
+    small {
+      display: block;
+    }
+
+    .lead {
+      margin-top: 18px;
+    }
+
+    .orange {
+      color: var(--orange);
+    }
+
+    .slide {
+      max-width: 1600px;
+      min-height: calc(100dvh - 68px);
+      margin: auto;
+      padding: 36px 6vw 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 28px;
+      animation: appear 0.25s ease-out;
+    }
+
+    .slide[hidden] {
+      display: none;
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      color: var(--body);
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid #cfcdc4;
+      padding-top: 15px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 6vw;
+      align-items: center;
+    }
+
+  /* 容器网格定义 */
+  .two, .three {
+    display: grid;
+    gap: 24px; /* 两栏时卡片变宽，间距可从 20px 略微增至 24px */
+  }
+
+  .two {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .three {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* 卡片通用样式 */
+  .two article,
+  .three article {
+    padding: 28px 24px; /* 两栏卡片内宽更大，垂直内边距可稍稍加深呼吸感 */
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: white;
+  }
+
+
+    .two article {
+      display: block;
+      margin-top: 12px;
+    }
+
+    .num {
+      font-family: monospace;
+      font-size: 20px;
+      color: var(--body);
+    }
+
+    .row {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      font-size: 12px;
+      border: 1px solid #cfcdc4;
+      border-radius: 99px;
+      display: inline-block;
+      padding: 5px 10px;
+      color: var(--body);
+    }
+
+    .band {
+      padding: 22px 0;
+      border-top: 1px solid #cfcdc4;
+      border-bottom: 1px solid #cfcdc4;
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .band span {
+      color: var(--body);
+    }
+
+    .source {
+      margin-top: 8px;
+    }
+
+    .cover h1 {
+      font: 400 clamp(70px, 13.2vw, 205px)/1.15 "Helvetica Neue", Arial, sans-serif;
+      letter-spacing: -0.075em;
+      margin: 28px 0;
+    }
+
+    .cover h2 {
+      font-size: clamp(32px, 3.5vw, 54px);
+    }
+
+    .edition,
+    .coverline {
+      display: flex;
+      justify-content: space-between;
+      font-size: 15px;
+    }
+
+    .edition {
+      border-top: 5px solid var(--ink);
+      padding-top: 18px;
+    }
+
+    .cover p {
+      margin: 24px 0;
+    }
+
+    .coverline {
+      border-top: 1px solid var(--ink);
+      margin-top: 36px;
+      padding-top: 20px;
+    }
+
+    .formula {
+      font: 400 clamp(80px, 12vw, 180px)/1.1 monospace;
+      color: var(--orange);
+      text-align: center;
+    }
+
+    .formula small {
+      font: 15px/2 system-ui;
+      color: var(--body);
+      margin-top: 18px;
+    }
+
+    .ladder>div {
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .ladder span {
+      display: block;
+      font-size: 14px;
+      color: var(--body);
+      margin-bottom: 10px;
+    }
+
+    .ladder b {
+      display: block;
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    blockquote {
+      margin: 28px 0 0;
+      border-left: 3px solid var(--ink);
+      padding-left: 22px;
+      font-size: 24px;
+      line-height: 1.7;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+
+    .stats strong,
+    .path strong {
+      font-size: 60px;
+      font-weight: 400;
+      letter-spacing: -0.05em;
+    }
+
+    .stats small,
+    .path small {
+      display: inline;
+      margin-left: 8px;
+      font-size: 17px;
+    }
+
+    .cycle {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      border-top: 1px solid var(--ink);
+      padding-top: 24px;
+      gap: 18px;
+      font: 14px monospace;
+    }
+
+    .cycle b {
+      display: block;
+      font: 500 24px/1.8 system-ui;
+    }
+
+    .cycle small {
+      font-family: system-ui;
+    }
+
+    .dots {
+      display: grid;
+      grid-template-columns: repeat(20, 1fr);
+      gap: 4px;
+      margin: 25px 0;
+    }
+
+    .dots i {
+      height: 8px;
+      background: var(--line);
+      border-radius: 1px;
+    }
+
+    .dots i.unknown {
+      background: var(--ink);
+    }
+
+    .dots~small {
+      margin-top: 12px;
+    }
+
+    .big-symbol {
+      font-size: 36px;
+      margin: 44px 0;
+    }
+
+    .big-symbol span {
+      color: #807d72;
+    }
+
+    .paper,
+    .workbench {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .paper {
+      padding: 26px;
+    }
+
+    .paperhead {
+      font-size: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 18px;
+      gap: 12px;
+    }
+
+    .english {
+      font: 400 clamp(24px, 2.5vw, 38px)/1.65 Georgia, serif;
+      margin: 30px 0;
+    }
+
+    .focused #condition {
+      background: #e6e5e0;
+      text-decoration: underline;
+      text-underline-offset: 6px;
+    }
+
+    .focused #condition:before {
+      content: '条件 / ';
+      font: 14px system-ui;
+    }
+
+    .demo-split {
+      grid-template-columns: 1.4fr 1fr;
+    }
+
+    .demo-split .primary {
+      margin-top: 25px;
+    }
+
+    #hint {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+
+    .workbench {
+      padding: 24px;
+    }
+
+    .workgrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-top: 22px;
+    }
+
+    .workgrid label {
+      display: block;
+      font-size: 15px;
+    }
+
+    .workgrid textarea {
+      display: block;
+      width: 100%;
+      height: 135px;
+      padding: 16px;
+      margin: 14px 0;
+      border: 1px solid #cfcdc4;
+      border-radius: 8px;
+      font-size: 20px;
+      resize: vertical;
+      line-height: 1.5;
+    }
+
+    .workgrid small {
+      margin-top: 12px;
+    }
+
+    .empty {
+      padding: 40px 20px;
+      font-size: 30px;
+      line-height: 1.5;
+      color: #807d72;
+    }
+
+    #feedback h3 {
+      font-size: 19px;
+      margin: 0 0 12px;
+    }
+
+    #feedback p {
+      font-size: 17px;
+      margin-bottom: 12px;
+    }
+
+    #feedback .quote {
+      background: var(--bg);
+      padding: 12px;
+      font: 17px/1.6 Georgia, serif;
+    }
+
+    #revision {
+      border-top: 1px solid var(--line);
+      margin-top: 20px;
+      padding-top: 18px;
+    }
+
+    input {
+      border: 1px solid #cfcdc4;
+      border-radius: 8px;
+      padding: 12px;
+      min-width: 190px;
+      flex: 1;
+    }
+
+    #completionStatus {
+      font-size: 15px;
+      margin-top: 12px;
+    }
+
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .comparison div {
+      background: var(--bg);
+      padding: 16px;
+      font-size: 17px;
+      line-height: 1.6;
+      overflow-wrap: anywhere;
+    }
+
+    .path {
+      margin: 34px 0;
+    }
+
+    .validation {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+    }
+
+    .validation>div {
+      border-top: 1px solid #cfcdc4;
+      padding-top: 24px;
+    }
+
+    .validation strong {
+      font: 400 clamp(35px, 4vw, 60px)/1.4 monospace;
+      letter-spacing: -0.06em;
+    }
+
+    .validation b {
+      display: block;
+      font-size: 19px;
+      font-weight: 500;
+      margin: 16px 0;
+    }
+
+    .closing h2 {
+      font-size: clamp(40px, 5vw, 77px);
+      margin: 30px 0;
+    }
+
+    .closing .row {
+      margin: 25px 0;
+    }
+
+    nav {
+      height: 68px;
+      border-top: 1px solid #cfcdc4;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 3vw;
+      background: var(--bg);
+      position: sticky;
+      bottom: 0;
+      z-index: 5;
+    }
+
+    nav button {
+      font-size: 13px;
+      padding: 8px 12px;
+    }
+
+    #progress {
+      position: absolute;
+      top: -2px;
+      left: 0;
+      height: 3px;
+      background: var(--orange);
+      transition: width 0.2s;
+    }
+
+    #brand {
+      color: var(--orange);
+      margin-right: 20px;
+    }
+
+    #counter {
+      font: 14px monospace;
+    }
+
+    .spacer {
+      flex: 1;
+    }
+
+    #clock {
+      font: 15px monospace;
+    }
+
+    #clock.over {
+      color: #cf2d56;
+    }
+
+    dialog {
+      background: var(--bg);
+      color: var(--ink);
+      border: 1px solid #cfcdc4;
+      border-radius: 12px;
+      padding: 28px;
+      width: min(900px, 92vw);
+      max-height: 85dvh;
+      overflow: auto;
+    }
+
+    dialog::backdrop {
+      background: #26251e88;
+    }
+
+    .modal-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .modal-head h2 {
+      font-size: 27px;
+    }
+
+    .modal-body {
+      line-height: 1.8;
+    }
+
+    .modal-body p,
+    .modal-body li {
+      font-size: 16px;
+      margin: 15px 0;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    #overviewGrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    #overviewGrid button {
+      text-align: left;
+      line-height: 1.8;
+    }
+
+    #notesBody p {
+      font-size: 20px;
+    }
+
+    .keyboard {
+      font-size: 14px;
+      margin-top: 22px;
+    }
+
+    #timerWrap {
+      display: none;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .rehearsal #timerWrap {
+      display: flex;
+    }
+
+    #toast {
+      position: fixed;
+      bottom: 85px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--ink);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      z-index: 20;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0.5;
+        transform: translateY(8px);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    @media (min-width: 1000px) and (max-height: 760px) {
+      .slide {
+        gap: 20px;
+        padding-top: 22px;
+        padding-bottom: 22px;
+      }
+
+      h2 {
+        font-size: 42px;
+      }
+
+      .cover h1 {
+        font-size: 140px;
+        margin: 15px 0;
+      }
+
+      .cover h2 {
+        font-size: 38px;
+      }
+
+      .coverline {
+        margin-top: 20px;
+      }
+
+      .english {
+        margin: 20px 0;
+      }
+
+      .stats strong {
+        font-size: 48px;
+      }
+
+      .three article {
+        padding: 20px;
+      }
+
+      .big-symbol {
+        margin: 28px 0;
+      }
+    }
+
+    @media (max-width: 850px) {
+      .slide {
+        padding: 24px;
+        gap: 26px;
+      }
+
+      .split,
+      .three,
+      .workgrid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .cover h1 {
+        font-size: 16vw;
+      }
+
+      .formula {
+        font-size: 95px;
+      }
+
+      .cover .formula {
+        display: none;
+      }
+
+      .validation {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .stats {
+        gap: 12px;
+      }
+
+      .stats strong {
+        font-size: 37px;
+      }
+
+      .cycle {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .band {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      nav {
+        padding: 0 12px;
+        gap: 5px;
+      }
+
+      #brand {
+        display: none;
+      }
+
+      nav button {
+        padding: 8px;
+      }
+
+      .navlabel {
+        display: none;
+      }
+
+      .coverline {
+        font-size: 13px;
+        gap: 16px;
+      }
+
+      .comparison {
+        grid-template-columns: 1fr;
+      }
+
+      .big-symbol {
+        margin: 20px 0;
+      }
+
+      #timerWrap button {
+        font-size: 11px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+
+    @media print {
+      @page {
+        size: landscape;
+        margin: 10mm;
+      }
+
+      .slide,
+      .slide[hidden] {
+        display: flex !important;
+        break-after: page;
+        min-height: 180mm;
+        padding: 10mm;
+        animation: none;
+      }
+
+      .slide:last-child {
+        break-after: auto;
+      }
+
+      nav,
+      dialog,
+      #toast {
+        display: none !important;
+      }
+
+      .slide h2 {
+        font-size: 34px;
+      }
+
+      .slide p {
+        font-size: 17px;
+      }
+
+      .cover h1 {
+        font-size: 100px;
+      }
+
+      .formula {
+        font-size: 90px;
+      }
+
+      .slide .three {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* Keep the working and closing pages within common projector heights. */
+    @media (min-width: 1000px) and (max-height: 760px) {
+      .workbench {
+        padding: 18px 22px;
+      }
+
+      .workgrid {
+        margin-top: 16px;
+        gap: 22px;
+      }
+
+      .workgrid textarea {
+        height: 105px;
+        margin: 10px 0;
+        padding: 12px 16px;
+      }
+
+      .workgrid small {
+        margin-top: 8px;
+      }
+
+      .paperhead {
+        padding-bottom: 14px;
+      }
+
+      #revision {
+        margin-top: 14px;
+        padding-top: 14px;
+      }
+
+      #completionStatus {
+        margin-top: 8px;
+      }
+
+      .comparison div {
+        padding: 12px;
+      }
+
+      #feedback p {
+        margin-bottom: 8px;
+      }
+
+      .closing h2 {
+        font-size: 48px;
+        margin: 20px 0;
+      }
+
+      .closing .row {
+        margin: 20px 0;
+      }
+
+      .closing .formula {
+        font-size: 120px;
+      }
+
+      .closing .formula small {
+        margin-top: 10px;
+      }
+    }
+
+    .sentence-analysis {
+      margin-top: 18px;
+      padding: 14px 16px;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .sentence-analysis p {
+      font-size: 15px;
+      line-height: 1.6;
+      margin: 4px 0;
+    }
+
+    .sentence-analysis b {
+      font-weight: 500;
+      margin-right: 8px;
+    }
+
+    .name-concept p+p {
+      margin-top: 14px;
+    }
+
+    .name-concept .orange {
+      display: inline-block;
+      min-width: 112px;
+      font-family: monospace;
+      font-size: 1.08em;
+    }
+
+    pre {
+      margin: 0;
+      font-family: inherit;
+      /* 覆盖默认的 monospace，继承 body 的 system-ui 字体 */
+      font-size: clamp(17px, 1.5vw, 23px);
+      /* 与项目中 p 的字号一致 */
+      line-height: 1.7;
+      /* 与项目中 p 的行高一致 */
+      color: var(--body);
+      /* 与项目中 p 的字色一致 */
+      white-space: pre-wrap;
+      /* 核心：保留连续空格与换行，但超出容器宽度时会自动折行 */
+      word-break: break-word;
+      /* 防止长连字符/单词撑破容器 */
+    }
+
+    .learning-steps { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+    .learning-steps > * { text-align:left; border:1px solid var(--line); border-radius:10px; padding:16px 20px; background:transparent; }
+    .learning-steps span { font:13px monospace; color:var(--body); }
+    .learning-steps b { display:block; font-size:20px; font-weight:500; margin:8px 0 4px; }
+    .input-workspace { display:grid; grid-template-columns:minmax(0,1.65fr) minmax(240px,1fr); gap:4vw; align-items:center; }
+    .learning-aside p { font-size:19px; }
+    .learning-takeaway { border-top:1px solid var(--line); margin:24px 0; padding-top:16px; }
+    .learning-takeaway p { margin-top:6px; }
+    .listening-cover { padding:32px 0; text-align:center; }
+    .listening-cover p { font-size:17px; margin:0 0 16px; }
+    .soundwave { height:80px; display:flex; justify-content:center; align-items:center; gap:7px; }
+    .soundwave i { height:var(--h); width:5px; border-radius:5px; background:var(--orange); }
+    .is-playing .soundwave i { animation:pulse-wave .7s var(--d) infinite alternate; }
+    @keyframes pulse-wave { to { transform:scaleY(.35); opacity:.5; } }
+    .audio-controls { border-top:1px solid var(--line); padding-top:16px; }
+    .audio-controls small { flex:1; min-width:150px; font-size:12px; }
+    #readingPanel { padding:16px 0; }
+    #readingPanel .english { font-size:23px; line-height:1.6; margin:12px 0; }
+    .transcript-context { font:16px/1.6 Georgia,serif; }
+    #sentenceAnalysis p { font-size:15px; }
+    @media(max-width:850px) { .input-workspace { grid-template-columns:1fr; } .learning-steps { gap:8px; } .learning-steps > * { padding:12px 10px; } .learning-steps b { font-size:16px; } .learning-steps small { font-size:12px; } }
+    @media(prefers-reduced-motion:reduce) { .is-playing .soundwave i { animation:none; } }
+
+    /* The two interactive demos share a 1440 × 810 presentation canvas. */
+    #deck:has(.presentation-slide:not([hidden])) {
+      position: relative;
+      height: calc(100dvh - 68px);
+      overflow: hidden;
+    }
+    .slide.presentation-slide {
+      position: absolute;
+      top: var(--presentation-top, 0px);
+      left: 50%;
+      width: 1440px;
+      height: 810px;
+      min-height: 0;
+      max-width: none;
+      margin: 0;
+      padding: 22px 60px;
+      display: grid;
+      grid-template-columns:minmax(0, 1fr);
+      grid-template-rows: auto auto auto minmax(0, 1fr) auto;
+      justify-content:stretch;
+      gap:16px;
+      transform: translateX(-50%) scale(var(--presentation-scale, 1));
+      transform-origin: top center;
+      animation: none;
+    }
+    .presentation-slide h2 { font-size:50px; line-height:1.2; }
+    .presentation-slide .eyebrow { font-size:13px; padding-top:12px; }
+    .presentation-slide .learning-steps { grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; }
+    .presentation-slide .learning-steps > * { position:relative; padding:12px 20px; background:white; border:1px solid var(--line); border-radius:12px; color:var(--ink); }
+    .presentation-slide .learning-steps > button[aria-pressed="true"], .presentation-slide .learning-steps > .active { border-color:#d6d3ca; box-shadow:inset 0 2px 0 var(--orange); }
+    .presentation-slide .learning-steps > button:hover { background:#fbfbf9; }
+    .presentation-slide .learning-steps small { color:var(--body); }
+    .presentation-slide .learning-steps > button[aria-pressed="true"] span, .presentation-slide .learning-steps > .active span { color:var(--orange); }
+    .presentation-slide .learning-steps span { display:block; line-height:1.4; }
+    .presentation-slide .learning-steps b { font-size:22px; margin:6px 0 3px; }
+    .presentation-slide .learning-steps small { font-size:14px; }
+    .presentation-slide .input-workspace { grid-template-columns:minmax(0,1.65fr) minmax(0,1fr); gap:42px; min-height:0; align-items:stretch; }
+    .presentation-slide .paper { padding:22px 26px; display:flex; flex-direction:column; justify-content:space-between; min-height:0; }
+    .presentation-slide .paperhead { font-size:15px; padding-bottom:14px; }
+    .presentation-slide .listening-cover { padding:16px 0; }
+    .presentation-slide .listening-cover h3 { font-size:27px; margin:14px 0; }
+    .presentation-slide .listening-cover p { font-size:18px; }
+    .presentation-slide .learning-aside { display:flex; flex-direction:column; justify-content:center; min-width:0; }
+    .presentation-slide .learning-aside h3 { font-size:28px; margin:14px 0; }
+    .presentation-slide .learning-aside p { font-size:20px; line-height:1.6; }
+    .presentation-slide .learning-takeaway { margin:20px 0; padding-top:14px; }
+    .presentation-slide #advanceInput { align-self:flex-start; margin-top:10px; }
+    .presentation-slide #readingPanel { padding:16px 0; }
+    .presentation-slide .transcript-context { font-size:21px; line-height:1.55; }
+    .presentation-slide #readingPanel .english { font-size:27px; line-height:1.5; margin:16px 0; }
+    .presentation-slide #sentenceAnalysis { padding:14px 16px; margin:0; }
+    .presentation-slide #sentenceAnalysis p { font-size:17px; line-height:1.6; margin:5px 0; }
+    .presentation-slide #hint { font-size:18px; line-height:1.6; margin-top:12px; }
+    .presentation-slide .audio-controls { padding-top:14px; }
+    .presentation-slide .audio-controls small { font-size:13px; }
+    .presentation-slide > small, .presentation-slide > .source { font-size:14px; line-height:1.5; }
+    .presentation-slide .workbench { padding:16px 24px; display:flex; flex-direction:column; min-height:0; }
+    .presentation-slide .workgrid { grid-template-columns:1fr 1fr; gap:28px; margin-top:18px; flex:1; min-height:0; }
+    .presentation-slide .workgrid label { font-size:16px; line-height:1.5; }
+    .presentation-slide .workgrid textarea { height:160px; margin:12px 0; padding:14px 16px; font-size:21px; line-height:1.5; resize:none; }
+    .presentation-slide .workgrid small { font-size:14px; margin-top:10px; }
+    .presentation-slide .empty { font-size:29px; padding:35px 20px; }
+    .presentation-slide #feedback h3 { font-size:20px; margin:0 0 8px; }
+    .presentation-slide #feedback p { font-size:18px; line-height:1.5; margin-bottom:12px; }
+    .presentation-slide #feedback .quote { font-size:18px; line-height:1.45; padding:10px 12px; }
+    .presentation-slide #revision { margin-top:14px; padding-top:14px; }
+    .presentation-slide #completionStatus { font-size:15px; line-height:1.5; margin-top:8px; }
+    .presentation-slide #completionStatus:empty { display:none; }
+    .presentation-slide .comparison { grid-template-columns:1fr 1fr; gap:12px; }
+    .presentation-slide .comparison div { padding:14px; }
+    .presentation-slide button { font-size:15px; padding:10px 15px; }
+    @media print {
+      #deck:has(.presentation-slide:not([hidden])) { height:auto; overflow:visible; }
+      .slide.presentation-slide { position:relative; top:auto; left:auto; transform:none; width:100%; height:180mm; padding:10mm; }
+    }
+
+    /* Writing starts across the whole workspace; reviewing introduces the second column. */
+    .writing-slide .workbench:not(.reviewing) .workgrid { grid-template-columns:minmax(0, 1fr); }
+    .writing-slide .workbench:not(.reviewing) #feedback { display:none; }
+    .writing-slide .workbench:not(.reviewing) .workgrid > div:first-child { display:flex; flex-direction:column; min-height:0; }
+    .writing-slide .workbench:not(.reviewing) textarea { flex:1; min-height:160px; height:auto; }
+    @media print { .slide.writing-slide { width:100%; height:180mm; } }
+  
+    .formula-carousel { min-width: 0; }
+    .formula-items { display: grid; align-items: center; }
+    .formula-item { grid-area: 1 / 1; min-width: 0; animation: appear .35s ease-out; }
+    .formula-item[hidden] { display: none; }
+    .formula-ability { font-size: .43em; white-space: nowrap; }
+    .formula-item > span { display: flex; align-items: center; justify-content: center; height: 1.1em; min-height: 1.1em; }
+    .formula-item > .formula-ability { height: 2.56em; }
+    .formula-carousel .formula-item small { min-height: 4em; margin-top: 18px; text-wrap: balance; }
+    .formula-controls { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 12px; }
+    .formula-controls [data-formula-index] { width: 24px; height: 24px; padding: 0; border: 0; border-radius: 50%; background: radial-gradient(circle, #cfcdc4 4px, transparent 5px); }
+    .formula-controls [aria-pressed="true"] { background: radial-gradient(circle, var(--orange) 5px, transparent 6px); }
+    @media (max-width: 850px) {
+      .cover .formula-carousel { display: block; }
+      .formula-carousel { font-size: 80px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .formula-item { animation: none; }
+    }
+
+
+    .learning-slide #readingHelpTitle { font-size:27px; }
+    .learning-slide #stageNumber, .learning-slide #readingHelp > .num { font:13px/1.5 monospace; color:var(--orange); }
+    .learning-slide .reading-intro { padding:18px 0; color:var(--body); font-size:20px; line-height:1.7; }
+    .learning-slide #hint.translation-card { margin:0; padding:6px 18px 14px; background:white; border:1px solid var(--line); border-top:3px solid var(--orange); border-radius:0 0 10px 10px; }
+    .translation-row { display:grid; grid-template-columns:26px minmax(0,1fr); gap:10px; padding:12px 0; }
+    .translation-row + .translation-row { border-top:1px solid var(--line); }
+    .translation-row > span { font:13px/1.8 monospace; color:var(--orange); }
+    .learning-slide #hint .translation-row p { font-size:18px; line-height:1.65; color:var(--ink); }
+    .translation-card mark { background:#fff0e8; color:#b83c00; padding:0 2px; }
+    .translation-card small { font-size:12px; padding-top:8px; border-top:1px solid var(--line); }
+    .learning-slide .audio-controls button[aria-pressed="true"] { background:var(--orange); border-color:var(--orange); color:white; }
+
+    /* Writing demo: the same paper, spacing and orange accents as the surrounding slides. */
+    .writing-slide .workbench { padding:16px 26px; border-radius:12px; }
+    .writing-slide .paperhead { font-size:15px; padding-bottom:14px; }
+    .writing-slide #writingState { font-size:12px; background:var(--bg); }
+    .writing-slide .workgrid { gap:26px; margin-top:14px; }
+    .writing-slide .draft-editor { display:flex; flex-direction:column; min-width:0; min-height:0; }
+    .writing-slide .workgrid label { font-size:24px; line-height:1.4; font-weight:500; }
+    .writing-slide .task-caption { font-size:16px; line-height:1.5; margin-top:6px; }
+    .writing-slide .workgrid textarea { margin:14px 0; padding:18px; height:144px; min-height:120px; background:#fbfbf9; border-color:var(--line); font:22px/1.6 Georgia,serif; }
+    .writing-slide .workbench:not(.reviewing) textarea { min-height:140px; }
+    .writing-slide .workgrid textarea::placeholder { color:#99968e; }
+    .writing-slide .editor-footer { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+    .writing-slide .editor-footer .row { gap:10px; }
+    .writing-slide #wordCount { margin:0; font:13px/1.5 system-ui,sans-serif; white-space:nowrap; }
+    .writing-slide .reviewing .editor-footer { flex-wrap:wrap; }
+    .writing-slide .reviewing .workgrid label { font-size:22px; }
+    .writing-slide .reviewing .task-caption { font-size:15px; margin-top:4px; }
+    .writing-slide .reviewing textarea { flex:1; height:160px; min-height:160px; margin:10px 0; padding:12px 14px; font-size:20px; line-height:1.5; }
+    .writing-slide #feedback { min-width:0; border-left:1px solid var(--line); padding-left:26px; }
+    .writing-slide #feedback .feedback-label { display:block; font:13px/1.5 monospace; color:var(--orange); margin-bottom:12px; }
+    .writing-slide #feedback h3 { font-size:21px; line-height:1.4; font-weight:500; margin-bottom:6px; }
+    .writing-slide #feedback p { font-size:17px; line-height:1.6; margin-bottom:12px; }
+    .writing-slide #feedback .quote { font-size:16px; line-height:1.5; padding:10px 12px; border-left:2px solid #cfcdc4; border-radius:0 6px 6px 0; }
+    .writing-slide #revision { padding-top:14px; margin-top:10px; }
+    .writing-slide #revision > .row { gap:10px; }
+    .writing-slide #completeCycle { margin-left:auto; }
+    .writing-slide #completionStatus { font-size:14px; line-height:1.5; }
+    .writing-slide > .source { font-size:13px; margin:0; }
+    .writing-slide .comparison { gap:12px; }
+    .writing-slide .comparison div { border:1px solid var(--line); background:var(--bg); border-radius:8px; padding:12px; }
+    @media print { .slide.writing-slide { padding:10mm; } }
+
+    /* Keep orange focused on the headline and primary interactions. */
+    .accent-slide .num { color:var(--body); }
+    .accent-slide .band { border-color:var(--line); padding:18px 20px; gap:24px; }
+    .accent-slide .band > b { color:var(--ink); font-weight:500; }
+    .persona-accent blockquote { border-color:var(--orange); }
+    .research-accent .lead, .research-accent .source { margin-top:0; }
+    @media (min-width:1000px) and (max-height:760px) { .research-accent { gap:18px; } .research-accent .big-symbol { margin:24px 0; } }
+    .research-accent .dots i.unknown { background:var(--orange); }
+    .research-accent [data-density][aria-pressed="true"],
+    .habit-accent [data-path][aria-pressed="true"] { background:var(--orange); border-color:var(--orange); color:white; }
+    .research-accent [data-sources] { text-underline-offset:4px; }
+    .cycle-accent .stats strong,
+    .habit-accent .path strong { color:var(--ink); }
+    .cycle-accent .stats strong small,
+    .habit-accent .path strong small { color:var(--body); }
+    .cycle-accent .cycle { border-top-color:#cfcdc4; }
+    .cycle-accent .cycle > div { color:var(--body); }
+    .cycle-accent .cycle b { color:var(--ink); }
+    .cycle-accent .cycle small { color:var(--body); }
+    .validation-accent .validation > div { border-top:1px solid #cfcdc4; padding-top:22px; }
+    .validation-accent .validation strong { color:var(--ink); }
+    @media print { .accent-slide { print-color-adjust:exact; -webkit-print-color-adjust:exact; } }
+
+    /* One clear next action at each stage; the final comparison gets the full canvas. */
+    .writing-slide .writing-next { margin-left:auto; }
+    .writing-slide #completeCycle { margin-left:auto; }
+    .writing-slide .workgrid textarea[readonly] { background:var(--bg); color:var(--body); }
+    .writing-slide .reviewing .workgrid label { font-size:21px; }
+    .writing-slide .reviewing .task-caption { font-size:14px; }
+    .writing-slide .reviewing .editor-footer { justify-content:flex-end; }
+    .writing-slide #feedbackTitle:focus, .writing-slide #comparisonTitle:focus { outline:none; }
+    .writing-slide #feedback .review-point { padding:10px 0; border-bottom:1px solid var(--line); }
+    .writing-slide #feedback .review-point b { font-size:17px; font-weight:500; }
+    .writing-slide #feedback .review-point p { font-size:16px; line-height:1.5; margin:5px 0 0; }
+    .writing-slide #feedback .review-point + .quote { margin-top:12px; }
+    .writing-slide #feedback small { font-size:13px; line-height:1.5; }
+    .writing-slide .output-steps .is-done:not(.active) { background:#fafaf7; }
+    .writing-slide .is-complete .workgrid { grid-template-columns:minmax(0,1fr); }
+    .writing-slide .is-complete .draft-editor { display:none; }
+    .writing-slide .is-complete #feedback { border-left:0; padding-left:0; }
+    .writing-slide .is-complete #feedback .comparison { margin-top:20px; grid-template-columns:1fr 1fr; gap:24px; }
+    .writing-slide .is-complete #feedback .comparison > div { padding:20px 22px; background:#fafaf7; }
+    .writing-slide .is-complete #feedback .comparison h3 { font:500 16px/1.4 system-ui,sans-serif; color:var(--body); margin-bottom:14px; }
+    .writing-slide .is-complete #feedback .comparison p { font:21px/1.65 Georgia,serif; color:var(--ink); margin:0; }
+    .writing-slide #completionStatus { color:var(--body); }
+    .closing-motto { border-left:1px solid #cfcdc4; padding-left:26px; }
+    .closing-motto .motto-zh { font-size:clamp(24px,2.3vw,34px); font-weight:400; line-height:1.65; color:var(--ink); letter-spacing:-.02em; }
+    .closing-motto .motto-en { font-size:clamp(17px,1.5vw,22px); line-height:1.7; color:var(--body); margin-top:20px; }
+    .closing-motto .motto-credit { margin-top:18px; font-size:13px; color:var(--body); }
+    .closing-motto .motto-credit a { color:inherit; text-decoration-color:#cfcdc4; text-underline-offset:3px; }
+  </style>
+</head>
+    
+  <body>
+      <main id="deck">
+        <!-- 1. 让理解，成为表达 -->
+        <section class="slide" data-title="让理解，成为表达" aria-label="第1页：让理解，成为表达">
+          <div class="eyebrow">
+            <span>INCREMENT / 01</span>
+            <span>让理解，成为表达</span>
+          </div>
+          <div class="cover">
+            <div class="edition" aria-hidden="true"></div>
+            <h1>Increment<span class="orange">.</span></h1>
+            <div class="split">
+              <div>
+                <h2>把看懂的英语，<br>化为自主的表达。</h2>
+                <p>面向需参与课堂讨论与学术展示的大学生。<br>一段精炼材料 · 一个目标表达 · 一轮自主微练。</p>
+                <button class="primary" data-go="1">从一个真实需求开始 →</button>
+              </div>
+              <div class="formula formula-carousel" role="region" aria-roledescription="轮播" aria-label="Increment 的三个要素">
+                <div class="formula-items">
+                  <div class="formula-item"><span>i+1</span><small>立足可理解输入，让每次挑战清晰可控。</small></div>
+                  <div class="formula-item" hidden><span class="formula-ability">Δ
+                      Ability</span><small>聚焦单一目标表达，从被动理解走向自主运用。</small></div>
+                  <div class="formula-item" hidden><span>i++</span><small>完成单轮微闭环，让每一次日常积累清晰可见。</small></div>
+                </div>
+                <div class="formula-controls">
+                  <button type="button" data-formula-index="0" aria-label="显示 i+1" aria-pressed="true"></button>
+                  <button type="button" data-formula-index="1" aria-label="显示 Δ Ability" aria-pressed="false"></button>
+                  <button type="button" data-formula-index="2" aria-label="显示 i++" aria-pressed="false"></button>
+                </div>
+              </div>
+            </div>
+            <div class="coverline">
+              听 → 读 → 再听 → 写 → 修订
+              <span>基于可理解输入与强迫输出假说的一站式英语自主学习工具</span>
+            </div>
+          </div>
+        </section>
+
+
+        
+        <!-- 2. 谁需要？ -->
+        <section class="slide accent-slide persona-accent" data-title="谁需要？" aria-label="第2页：谁需要？" hidden>
+          <div class="eyebrow">
+            <span>INCREMENT / 02</span>
+            <span>谁需要？</span>
+          </div>
+          <h2>脱离原文辅助之后，<br><span class="orange">熟悉的表达却用不出来。</span></h2>
+          <div class="split">
+            <div>
+              <div class="tag">用户画像 · 某同学</div>
+                <h3>某同学，21 岁 · 大三</h3>
+                <p>下周要做英文课程汇报。她能借助字幕理解大意，<br>却常在自己的表达中漏掉理由或条件。</p>
+                <blockquote>“看字幕时认为懂了，<br>轮到自己解释时，却脑子里只剩几个关键词，<br>组织不出完整流利的内容。”</blockquote>
+              </div>
+              <div class="ladder">
+                <div>
+                  <span>以前</span><b>看视频 · 收藏句子 · 复制答案</b><small>输入有了，独立使用的机会不足。</small>
+                </div>
+                <div>
+                  <span>需求</span><b>明确观点 · 保留条件 · 说明理由</b><small>练习应符合使用实际。</small>
+                </div>
+                <div>
+                  <span>约束</span><b>15–20 分钟 · 可暂停续练 · 口语部分可选</b><small>不方便开口时，仍能完成核心练习。</small>
+                </div>
+              </div>
+            </div>
+        </section>
+        
+        <!-- 3. 学术研究赋能英语学习 -->
+        <section class="slide accent-slide research-accent" data-title="学术研究赋能英语学习" aria-label="第3页：学术研究赋能英语学习" hidden>
+          <div class="eyebrow">
+            <span>INCREMENT / 03</span>
+            <span>学术研究赋能英语学习</span>
+          </div>
+          <h2><span class="orange">可理解的输入</span>，是起点。</h2>
+          <p class="lead">用有限支持帮助理解，再用独立表达暴露需要改进的地方。</p>
+          <div class="three">
+            <article>
+              <span class="num">01</span>
+              <h3>材料要能理解</h3>
+              <p>人工难度说明，允许换材料、加提示。</p><div class="dots" id="coverage"></div><div class="row"><button data-density="5" aria-pressed="true">95% 覆盖</button><button data-density="2" aria-pressed="false">98% 覆盖</button></div><small id="densityLabel">每 100 词，约 5 个生词</small>
+            </article>
+            <article>
+              <span class="num">02</span>
+              <h3>支持逐步撤除</h3>
+              <p>先听 → 英文字幕核对 → 再听。</p>
+              <div class="big-symbol">听 <span>→</span> 读 <span>→</span> 听</div>
+              <small>借字幕核对表达，再回到声音本身。</small>
+            </article>
+            <article>
+              <span class="num">03</span>
+              <h3>输出后再审视</h3>
+              <p>先独立写，再核对原文与反馈。</p>
+              <div class="big-symbol">写 <span>↔</span> 修订</div>
+              <small>通过表达发现遗漏，再带着问题重读。</small>
+            </article>
+          </div>
+          <p class="source">研究线索：Hu & Nation (2000)；Kremmel et al. (2023)；Mitterer & McQueen (2009)；Izumi (2002)。<button class="text" data-sources>查看文献 ↗</button></p>
+        </section>
+
+        <!-- 4. 一份材料，一轮练习 -->
+        <section class="slide accent-slide cycle-accent" data-title="一份材料，一轮练习" aria-label="第4页：一份材料，一轮练习" hidden>
+          <div class="eyebrow">
+            <span>INCREMENT / 04</span>
+            <span>一份材料，一轮练习</span>
+          </div>
+          <h2>少一个工具切换，<br>多一次<span class="orange">完整练习。</span></h2>
+          <div class="stats">
+            <div>
+              <strong>60–90<small>秒</small></strong>
+              <p>一段英语音视频</p>
+            </div>
+            <div>
+              <strong>1<small>项</small></strong>
+              <p>已理解、尚不熟练的表达</p>
+            </div>
+            <div>
+              <strong>15–20<small>分钟</small></strong>
+              <p>核心练习预计用时</p>
+            </div>
+          </div>
+          <div class="cycle">
+            <div>01<b>先听</b><small>抓主旨与理由</small></div>
+            <div>02<b>阅读</b><small>核对字幕，选目标</small></div>
+            <div>03<b>再听</b><small>撤掉字幕</small></div>
+            <div>04<b>独立写</b><small>正式练习 80–100 词</small></div>
+            <div>05<b>审阅与完成</b><small>自动记入完成记录</small></div>
+          </div>
+          <div class="band">
+            <b>＋ 可选口语</b>
+            <span>复述 → 本地录音 → 回听自评；全程预计 20–25 分钟。</span>
+          </div>
+        </section>
+
+        <!-- 5. 兴趣是最好的老师 -->
+        <section class="slide accent-slide import-accent" data-title="兴趣是最好的老师" aria-label="第5页：兴趣是最好的老师" hidden>
+          <div class="eyebrow"><span>INCREMENT / 05</span><span>从兴趣出发</span></div>
+          <h2><span class="orange">兴趣</span>是最好的老师。<br>把想看的内容，变成今天的练习。</h2>
+          <p class="lead">支持自行导入音视频与带时间轴的文本，从喜欢的话题、课程或访谈开始。</p>
+          <div class="three">
+            <article><span class="num">01 / 音频</span><h3>听你关心的话题</h3><p>播客、访谈、课程录音。<br>选取想听懂、想表达的一小段。</p><small>MP3、M4A、WAV</small></article>
+            <article><span class="num">02 / 视频</span><h3>看你感兴趣的内容</h3><p>演讲、课程、知识短片。<br>让练习贴近真实的使用需要。</p><small>MP4、WebM</small></article>
+            <article><span class="num">03 / 时间轴文本</span><h3>让声音与文字对齐</h3><p>导入字幕或带时间戳的转录稿，<br>按句定位、回放与核对。</p><small>SRT、VTT、带时间戳的 TXT</small></article>
+          </div>
+          <div class="band"><b>导入 → 配对 → 选片段 → 开始练习</b><span>核对音文与时间轴，进入同一套听、读、写、修订流程。</span></div>
+        </section>
+        
+        <!-- 6. 听 → 读 → 再听 -->
+        <section class="slide learning-slide presentation-slide" data-title="听 → 读 → 再听" aria-label="第6页：听 → 读 → 再听" hidden>
+          <div class="eyebrow"><span>INCREMENT / 06</span><span>听力输入 · 三步精听法</span></div>
+          <h2>从捕捉大意，<span class="orange">到听透细节。</span></h2>
+          <div class="learning-steps" aria-label="输入学习阶段">
+            <button data-listen-stage="0" aria-pressed="true">
+              <span>01 / 首听</span>
+              <b>隐藏字幕，盲听大意</b>
+              <small>摆脱文本依赖，捕捉核心话题与态度</small>
+            </button>
+            <button data-listen-stage="1" aria-pressed="false">
+              <span>02 / 精读</span>
+              <b>对照原文，精读细节</b>
+              <small>借助译文与 AI 解析，理清句法与逻辑</small>
+            </button>
+            <button data-listen-stage="2" aria-pressed="false">
+              <span>03 / 复听</span>
+              <b>脱稿复听，内化语感</b>
+              <small>再次隐去文本，体会连读、重音与停顿</small>
+            </button>
+          </div>
+          <div class="input-workspace">
+            <article class="paper">
+              <div class="paperhead">
+                <span>主题：Flexible working / 灵活办公</span>
+                <span id="listenBadge" class="tag">首听 · 盲听模式</span>
+              </div>
+              <div id="listeningCover" class="listening-cover">
+                <div class="soundwave" aria-hidden="true">
+                  <i style="--h:12px;--d:0.0s"></i>
+                  <i style="--h:24px;--d:0.07s"></i>
+                  <i style="--h:40px;--d:0.14s"></i>
+                  <i style="--h:28px;--d:0.21s"></i>
+                  <i style="--h:52px;--d:0.28s"></i>
+                  <i style="--h:66px;--d:0.35s"></i>
+                  <i style="--h:38px;--d:0.42s"></i>
+                  <i style="--h:56px;--d:0.49s"></i>
+                  <i style="--h:76px;--d:0.56s"></i>
+                  <i style="--h:48px;--d:0.63s"></i>
+                  <i style="--h:30px;--d:0.70s"></i>
+                  <i style="--h:62px;--d:0.77s"></i>
+                  <i style="--h:42px;--d:0.84s"></i>
+                  <i style="--h:24px;--d:0.91s"></i>
+                  <i style="--h:50px;--d:0.98s"></i>
+                  <i style="--h:34px;--d:1.05s"></i>
+                  <i style="--h:16px;--d:1.12s"></i>
+                </div>
+                <h3 id="listenPrompt">不必纠结个别生词，先听整体脉络。</h3>
+                <p id="listenSub">完整播放一遍，留意高频词与说话人的语气转折。</p>
+                <span class="tag">字幕已隐藏 · 专注声音输入</span>
+              </div>
+              <div id="readingPanel" hidden>
+                <p class="transcript-context">① Many employees value flexible working because it gives them more control over
+                  their schedules.</p>
+                <p class="english" id="sentence"><span>② Flexible working may improve job satisfaction</span> <span
+                    id="condition">when teams coordinate effectively.</span></p>
+                <p class="transcript-context">③ Without clear communication, however, it can lead to confusion.</p>
+                <div class="row">
+                  <button id="focusSentence" aria-pressed="false" aria-controls="sentenceAnalysis">AI 拆解核心句</button>
+                  <button id="hintButton" aria-expanded="false" aria-controls="hint">参考译文 · 全段对照</button>
+                </div>
+              </div>
+              <div class="audio-controls row">
+                <button class="primary" id="playMaterial" aria-pressed="false">▶ 播放音频</button>
+                <small id="audioStatus" role="status">当前阶段：01 首听 · 盲听抓主旨</small>
+              </div>
+            </article>
+            <aside class="learning-aside">
+              <div id="readingHelp" hidden>
+                <span class="num">AI / 精读辅助</span>
+                <h3 id="readingHelpTitle">理清句法主干，把握隐含条件</h3>
+                <p id="readingIntro" class="reading-intro">本轮目标表达：用 when 说明观点成立的条件。点击左侧按钮，核对核心句结构或全文译文。</p>
+                <div id="sentenceAnalysis" class="sentence-analysis" hidden aria-live="polite">
+                  <p><b>句法主干</b> Flexible working（主语）→ may improve（谓语）→ job satisfaction（宾语）</p>
+                  <p><b>条件限定</b> 情态动词 may 表“可能性”；when 从句限定了生效前提，不可笼统概括为“灵活办公必然提升满意度”。</p>
+                  <p><b>下文印证</b> 第 ③ 句以 however 引出转折，指出“缺乏清晰沟通会导致混乱”，从反面印证了第 ② 句的协作前提。</p>
+                </div>
+                <div id="hint" class="translation-card" hidden aria-live="polite" aria-label="全段参考译文">
+                  <div class="translation-row"><span>01</span>
+                    <p>许多员工看重灵活办公，因为这能让他们更自主地掌控日程。</p>
+                  </div>
+                  <div class="translation-row"><span>02</span>
+                    <p>灵活办公<mark>或许能</mark>提升工作满意度，但<mark>前提是团队能高效协作</mark>。</p>
+                  </div>
+                  <div class="translation-row"><span>03</span>
+                    <p>然而，若缺乏清晰的沟通，这种模式也容易引发混乱。</p>
+                  </div>
+                  <small>按 ① ② ③ 逐句核对 · 读懂后建议收起译文</small>
+                </div>
+              </div>
+              <div id="inputGuidance">
+                <span class="num" id="stageNumber">01 / FIRST LISTEN</span>
+                <h3 id="stageTitle">带着问题听：判断主旨与态度</h3>
+                <p id="stageDescription">听完后尝试回答：这段话围绕什么展开？说话人对“灵活办公”是无条件支持，还是有所保留？</p>
+                <div class="learning-takeaway">
+                  <small>本步核心目标</small>
+                  <p id="stageTakeaway">明确段落主旨，并锁定 1～2 处没听清的语音或逻辑卡点。</p>
+                </div>
+              </div>
+              <button id="advanceInput" class="primary">下一步：对照字幕精读 →</button>
+            </aside>
+          </div>
+          <small>基于同一段语料完成“听 → 读 → 再听 → 写 → 评 → 改”闭环练习（当前音波为静音动画，AI 解析为预设示例）。</small>
+        </section>
+
+        <!-- 7. 写、审阅、修订 -->
+        <section class="slide presentation-slide writing-slide" data-title="写 → 评 → 改" aria-label="第7页：写 → 评 → 改" hidden>
+          <div class="eyebrow">
+            <span>INCREMENT / 07</span>
+            <span>写作输出 · 从听懂到主动表达</span>
+          </div>
+          <h2>写出自己的理解，<span class="orange">再让表达更准确。</span></h2>
+          <div class="learning-steps output-steps" aria-label="输出学习阶段">
+            <div id="writeStep" class="active"><span>04 / 写作</span><b>独立概括，组织观点</b><small>收起原文，用自己的话总结</small></div>
+            <div id="reviewStep"><span>05 / 批改</span><b>AI 评价，定位问题</b><small>核对内容、逻辑与语言表达</small></div>
+            <div id="reviseStep"><span>06 / 润色</span><b>对照反馈，修订表达</b><small>补全条件，修正语法，再次核对</small></div>
+          </div>
+          <div class="workbench" id="writingBench">
+            <div class="paperhead"><span>Increment / 写作工作台</span><span id="writingState" class="tag">独立写作 · 原文已隐藏</span></div>
+            <div class="workgrid">
+              <div class="draft-editor">
+                <label for="draft" id="draftLabel">用自己的话，概括这段材料。</label>
+                <p class="task-caption" id="writingGuide" role="status">先写 2–3 句英文，也可使用示例初稿体验完整流程。</p>
+                <textarea id="draft" placeholder="What is the main idea? Summarize it in your own words…" spellcheck="false" aria-describedby="writingGuide wordCount"></textarea>
+                <div class="editor-footer"><div class="row">
+                  <button id="sample">使用示例初稿</button>
+                  <button class="primary" id="feedbackButton" disabled>查看反馈 →</button>
+                </div>
+                <small id="wordCount">0 词 · 建议 2–3 句</small></div>
+              </div>
+              <div id="feedback" aria-live="polite">
+                <div class="empty">先尝试独立成文，<br>再对照 AI 反馈与原文查漏补缺。</div>
+              </div>
+            </div>
+            <div id="revision" hidden>
+              <div class="row">
+                <button id="editDraft" hidden>← 返回编辑</button>
+                <button id="applyRevision" hidden>填入修订示例</button>
+                <button id="keep" hidden>保留当前表述</button>
+                <button id="restartDemo" hidden>重新演示</button>
+                <button class="primary writing-next" id="revise" hidden>开始修订 →</button>
+                <button class="primary writing-next" id="completeCycle" hidden disabled>完成并对照 →</button>
+                <button class="primary writing-next" id="nextWritingPage" hidden>继续演示 →</button>
+              </div>
+              <p id="completionStatus" role="status"></p>
+            </div>
+          </div>
+          <p class="source">演示写 2–3 句，正式练习写 80–100 词。AI 反馈为预设示例；自由输入自查；返回本页会重置初稿。</p>
+        </section>
+
+        
+        <!-- 有选择，也能坚持 -->
+        <section class="slide accent-slide habit-accent" data-title="有选择，也能坚持" aria-label="第8页：有选择，也能坚持" hidden>
+          <div class="eyebrow">
+            <span>INCREMENT / 08</span>
+            <span>有选择，也能坚持</span>
+          </div>
+          <h2>开口是选择，<br><span class="orange">持续练习</span>才是主线。</h2>
+          <div class="split">
+            <div>
+              <div class="row" role="group" aria-label="练习路径">
+                <button data-path="core" aria-pressed="true">核心练习</button>
+                <button data-path="speaking" aria-pressed="false">加入口语</button>
+              </div>
+              <div id="pathContent" class="path">
+                <strong>15–20 <small>分钟</small></strong>
+                <h3>听、读、写、审阅与完成</h3>
+                <p>安静练习，也能完成一轮。</p>
+              </div>
+              <small>可选口语：本地录音 → 回听 → 自评 → 完成一次自增。</small>
+            </div>
+            <div class="ladder"><div>
+              <span>完成一轮</span>
+              <b>自动记入完成记录</b>
+              <small>记录完成日期，累计轮次 i++。</small>
+            </div>
+            <div>
+              <span>每日使用</span>
+              <b>打开应用，开始今天的练习</b>
+              <small>选择适合的材料，再学一轮。</small>
+            </div>
+            <div>
+              <span>持续积累</span>
+              <b>让英语练习成为日常</b>
+              <small>通过每日使用，反复理解、表达与修订。</small>
+            </div>
+          </div>
+          </div>
+        </section>
+        
+        <!-- AI赋能页 -->
+        <section class="slide accent-slide ai-accent" data-title="AI赋能" aria-label="第9页：AI赋能" hidden>
+          <div class="eyebrow">
+            <span>INCREMENT / 09</span>
+            <span>AI赋能，助力学习</span>
+          </div>
+          <h2>AI 辅助两个环节：<br><span class="orange">读时分析</span>，写后评价。</h2>
+          <div class="two">
+            <!-- 左栏 -->
+            <article>
+              <span class="num">01 / 阅读</span>
+              <h3>句子结构与语法分析</h3>
+              <p>选中句子，分析主谓宾主干、修饰成分与从句嵌套关系。</p>
+              <small>结合上下文语境，解释句法结构如何服务于语义表达。</small>
+            </article>
+            <!-- 右栏 -->
+            <article>
+              <span class="num">02 / 写作</span>
+              <h3>表达质量与逻辑评价</h3>
+              <p>对照输入材料，核对信息完整度、行文逻辑与语言规范。</p>
+              <small>按优先级反馈：优先纠正逻辑偏差，再给出遣词建议。</small>
+            </article>
+          </div>
+          <div class="band"><b>服务不可用时</b><span>继续逐段阅读原文、按检查清单审阅写作，完成后自动记入记录。</span></div>
+        </section>
+
+        <!-- 验证页 -->
+        <section class="slide accent-slide validation-accent" data-title="测试、反馈与迭代" aria-label="第10页：测试、反馈与迭代" hidden>
+          <div class="eyebrow">
+            <span>INCREMENT / 10</span>
+            <span>测试、反馈与迭代</span>
+          </div>
+          <h2>先验证程序完整性与兼容性，<br>再交由同学实测并基于反馈<span class="orange">迭代循环</span>。</h2>
+          <p class="lead">从基础质量校验到用户反馈驱动的持续迭代</p>
+          <div class="validation">
+            <div>
+              <strong>STEP 01</strong><b>程序完整性与兼容性验证</b><small>核验核心功能链路是否完整闭环，并排查不同设备与环境下的运行兼容性。</small>
+            </div>
+            <div>
+              <strong>STEP <span class="orange">02</span></strong><b>交由同学实测体验</b><small>邀请同学在无指导状态下独立使用程序，检验真实场景下的可用性与流畅度。</small>
+            </div>
+            <div>
+              <strong>STEP 03</strong><b>测试反馈收集与提炼</b><small>通过问卷与访谈收集同学在实测中遇到的报错、卡点与功能改进建议。</small>
+            </div>
+            <div>
+              <strong>STEP <span class="orange">04</span></strong><b>基于反馈迭代循环</b><small>针对收集到的反馈定向修复与优化程序，再次交由同学复测，实现迭代。</small>
+            </div>
+          </div>
+          <div class="band">
+            <b>验证与迭代链路</b><span>完整性与兼容性校验 → 同学实测获取反馈 → 基于反馈持续迭代循环</span>
+          </div>
+          <p class="source">迭代闭环：对比每轮迭代循环前后的程序稳定性与用户任务表现，全流程测试与改进记录归档至 Final Report。</p>
+        </section>
+
+        <!-- 结束页 -->
+        <section class="slide" data-title="下一步：把每一轮做扎实" aria-label="第11页：下一步：把每一轮做扎实" hidden>
+          <div class="eyebrow">
+            <span>INCREMENT / 11</span>
+            <span>下一步：把每一轮做扎实</span>
+          </div>
+          <div class="closing">
+            <div class="tag">Increment / NEXT STEP</div>
+            <h2>让每一次理解，<br>都化为自主的表达。</h2>
+            <div class="split">
+              <div class="closing-motto" aria-label="项目学习格言">
+                <!-- 拉丁文：进一步放大至 1.4em，加粗 700，微调行高避免两行过散 -->
+                <p class="motto-en motto-la" lang="la"
+                  style="font-size: 2em; font-weight: 700; line-height: 1.25; letter-spacing: 0.01em; margin-bottom: 0.35em;">
+                  Gutta cavat lapidem<br>non vi sed saepe cadendo.
+                </p>
+                <!-- 中文：设定为拉丁文的 0.618 倍（1.4em × 0.618 ≈ 0.865em），保留轻微透明度区分层级 -->
+                <p class="motto-zh"
+                  style="font-size: calc(2em * 0.618); opacity: 0.85; line-height: 1.5; margin-top: 0; margin-bottom: 0.5em;">
+                  水滴石穿，非因力大，<br>而在日夜不绝。
+                </p>
+                <small class="motto-credit" style="font-size: 0.75rem; opacity: 0.65;">— 奥维德（Ovid）· 《黑海书简》IV. 10. 5</small>
+              </div>
+              <div class="formula formula-carousel" role="region" aria-roledescription="轮播" aria-label="Increment 的三个要素">
+                <div class="formula-items">
+                  <div class="formula-item"><span>i+1</span><small>立足可理解输入，让每次挑战清晰可控。</small></div>
+                  <div class="formula-item" hidden><span class="formula-ability">Δ
+                      Ability</span><small>聚焦单一目标表达，从被动理解走向自主运用。</small></div>
+                  <div class="formula-item" hidden><span>i++</span><small>完成单轮微闭环，让每一次日常积累清晰可见。</small></div>
+                </div>
+                <div class="formula-controls">
+                  <button type="button" data-formula-index="0" aria-label="显示 i+1" aria-pressed="true"></button>
+                  <button type="button" data-formula-index="1" aria-label="显示 Δ Ability" aria-pressed="false"></button>
+                  <button type="button" data-formula-index="2" aria-label="显示 i++" aria-pressed="false"></button>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <button class="primary" data-go="6">回看演示 ↗</button>
+              <button data-sources>研究依据</button>
+            </div>
+          </div>
+        </section>
+
+      
+      </main>
+      
+
+      <nav aria-label="演示控制"><div id="progress"></div><span id="brand">Increment.</span><button id="prev" aria-label="上一页">←</button><span id="counter" aria-live="polite"></span><button id="next" aria-label="下一页">→</button><span class="spacer"></span><div id="timerWrap"><span id="clock">00:00</span><button id="timer">开始</button><button id="resetTimer" aria-label="重置计时">↺</button></div><button id="overview">目录 <span class="navlabel">O</span></button><button id="notes">讲稿 <span class="navlabel">N</span></button><button id="presenter">排练 <span class="navlabel">P</span></button><button id="full" aria-label="切换全屏">⛶</button></nav><div id="toast" role="status" hidden></div><dialog id="overviewDialog" aria-labelledby="overviewTitle"><div class="modal-head"><h2 id="overviewTitle">内容目录</h2><button data-close>关闭</button></div><div id="overviewGrid"></div><div class="row" style="margin-top:22px"><button id="rehearse">从头排练</button></div><p class="keyboard">← / → / 空格翻页 · Home / End 首尾页 · F 全屏 · O 目录 · N 讲稿 · P 排练 · Esc 关闭弹窗。讲稿会显示在当前屏幕，投影时请注意。</p></dialog><dialog id="notesDialog" aria-labelledby="notesTitle"><div class="modal-head"><h2 id="notesTitle">本页讲稿</h2><button data-close>关闭</button></div><div id="notesBody"></div></dialog><dialog id="sourcesDialog" aria-labelledby="sourcesTitle"><div class="modal-head"><h2 id="sourcesTitle">研究依据与产品说明</h2><button type="button" data-close>关闭</button></div><div class="modal-body">
+        <h3>核心学术文献</h3><ol>
+        <li>Hu, M., &amp; Nation, P. (2000). Unknown vocabulary density and reading comprehension. <i>Reading in a Foreign Language, 13</i>(1), 403–430. <a href="https://www.wgtn.ac.nz/lals/resources/paul-nations-resources/paul-nations-publications/publications/documents/2000-Hu-Density-and-comprehension.pdf" target="_blank" rel="noopener">作者所在大学公开原文</a>。66 名学习者；98% 为回归推算的参考，而非在 98% 实验组直接发现的普适临界点。</li>
+        <li>Laufer, B., &amp; Ravenhorst-Kalovski, G. C. (2010). Lexical threshold revisited: Lexical text coverage, learners’ vocabulary size and reading comprehension. <i>Reading in a Foreign Language, 22</i>(1), 15–30. <a href="https://cris.haifa.ac.il/en/publications/lexical-threshold-revisited-lexical-text-coverage-learners-vocabu/" target="_blank" rel="noopener">海法大学文献记录</a>。提出 95% 最低与 98% 较优阅读参考；不作为个体理解保证。</li>
+        <li>Kremmel, B., Indrarathne, B., Kormos, J., &amp; Suzuki, S. (2023). Unknown vocabulary density and reading comprehension: Replicating Hu and Nation (2000). <i>Language Learning, 73</i>(4), 1127–1163. <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/lang.12622" target="_blank" rel="noopener">doi:10.1111/lang.12622</a>。104 名斯里兰卡学习者；大体线性关系，但题型和文本之间不一致，未复制出 98% 足以保证充分理解的阈值。</li>
+        <li>Mitterer, H., &amp; McQueen, J. M. (2009). Foreign subtitles help but native-language subtitles harm foreign speech perception. <i>PLoS ONE, 4</i>(11), e7785. <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0007785" target="_blank" rel="noopener">doi:10.1371/journal.pone.0007785</a>。荷兰语母语者、特定英语口音条件；新片段复述结果不能推广为所有中文字幕场景的因果结论。</li>
+        <li>Izumi, S. (2002). Output, input enhancement, and the noticing hypothesis: An experimental study on ESL relativization. <i>Studies in Second Language Acquisition, 24</i>(4), 541–577. <a href="https://doi.org/10.1017/S0272263102004023" target="_blank" rel="noopener">doi:10.1017/S0272263102004023</a>。输出—输入活动的目标结构学习增益较优；并不直接证明 Increment 的整体效果或长期迁移。</li>
+        </ol><p>研究为设计提供依据，不代表 Increment 已被验证有效。本演示介绍的产品方案包括：人工审核材料与自行导入音视频、时间轴文本；AI 用于阅读时的句子成分与语法分析，以及写作后的评价分析；口语录音与自评可选。页面使用团队编写的短例句，未加载真实音视频、模型调用或录音上传。</p></div></dialog>
+         
+    <script>
+      const $=id=>document.getElementById(id),slides=[...document.querySelectorAll('.slide')];
+      const meta=[
+        {
+          "title": "让理解，成为表达",
+          "time": 25,
+          "note": "开场只讲一个承诺：把已经看懂的英语用进自己的表达。Increment 是课程项目提案，当前网页是交互原型。今天围绕一个学生、一段材料、一轮练习介绍产品。"
+        },
+        {
+          "title": "谁需要？",
+          "time": 50,
+          "note": "本页某同学是示例画像，不是访谈结果。她是需要做英文课程汇报的大三学生，能借助字幕理解大意，却难以独立组织完整表达。需求是明确观点、保留条件、说明理由。产品方案以核心练习 15–20 分钟、可暂停续练和口语可选回应使用约束；当前演示返回写作页会重置初稿。"
+        },
+        {
+          "title": "学术研究赋能英语学习",
+          "time": 50,
+          "note": "点击覆盖率：同样一百词，五个生词变成两个，差异是负担的示意，不能把98%讲成普适门槛。第二个设计是渐退字幕，第三个是独立输出后再审视。学术报告的机制启发产品，但没有直接证明我们产品的效果。"
+        },
+        {
+          "title": "一份材料，一轮练习",
+          "time": 60,
+          "note": "按页面五步介绍完整流程：先听抓主旨与理由，阅读核对字幕并选一个已理解但尚不熟练的目标表达，再听时撤掉字幕，独立写作后审阅并完成。正式练习写 80–100 词，后面的网页演示缩短为 2–3 句。核心练习预计 15–20 分钟；按需加入口语复述、本地录音、回听自评后，全程预计 20–25 分钟。完成后自动记入记录。"
+        },
+        {
+          "title": "兴趣是最好的老师",
+          "time": 50,
+          "note": "从用户关心的播客、课程或视频出发，介绍产品方案中的导入流程。音频支持 MP3、M4A、WAV，视频支持 MP4、WebM，时间轴文本支持 SRT、VTT 和带时间戳的 TXT。导入后核对音文与时间轴，配对并选取一段材料，再进入听、读、写、修订流程。当前网页展示导入方案，未实现文件导入。"
+        },
+        {
+          "title": "听 → 读 → 再听",
+          "time": 85,
+          "note": "依次点击听、读、再听：首听隐藏字幕；阅读显示三句英文，可切换核心句解析与参考译文；复听撤掉字幕，关注语流、重音与停顿。音波仅作静音动画，不播放音频，AI 解析也是预设样例。本轮目标表达是用 when 说明观点成立的条件。Flexible working 作主语，may improve 表示可能性，job satisfaction 是宾语，when 从句说明协作前提。核对意思之后先再听，再进入独立摘要；写后反馈继续检查条件是否保留。"
+        },
+        {
+          "title": "写 → 评 → 改",
+          "time": 95,
+          "note": "演示写 2–3 句，正式练习写 80–100 词。每次进入本页会重置初稿，这是当前演示行为。点击“使用示例初稿”，再点击“查看反馈”：先说明 always improves 把可能性写成必然，漏掉 when 所限定的协作条件与沟通风险，再指出 give 应为 gives。审阅时初稿只读，点击“开始修订”后可编辑，或填入修订示例。有修改或明确选择“保留当前表述”后，才可“完成并对照”。完成后展示初稿和终稿并记入完成记录，可重新演示或继续到下一页。自由输入采用原文自查，也提示核对目标表达 when；反馈为预设示例，未接入模型。"
+        },
+        {
+          "title": "有选择，也能坚持",
+          "time": 50,
+          "note": "切换核心练习与加入口语两条路径，预计用时分别为 15–20 分钟和 20–25 分钟。口语方案为本地录音、回听和自评，按需选择，不影响核心练习的完成。每轮完成后自动记入记录，产品方案记录完成日期与累计轮次；当前写作演示显示累计轮次并保存完成时间。每日打开应用、选择适合的材料，再完成一轮理解、表达与修订。当前网页只展示口语路径说明，未接入录音。"
+        },
+        {
+          "title": "AI赋能",
+          "time": 50,
+          "note": "AI 的产品方案限定在两个环节：阅读时分析选中句子的主干、修饰成分、从句关系及语义；写作后对照输入材料核对信息完整度、逻辑与语言，优先纠正逻辑偏差，再给出遣词建议。服务不可用时，继续阅读原文并按检查清单自查，完成后仍可记入记录。当前网页的阅读分析和示例反馈均为预设内容，自由输入采用原文自查。"
+        },
+        {
+          "title": "测试、反馈与迭代",
+          "time": 80,
+          "note": "按页面四步介绍验证与迭代计划。第一步核验核心功能链路的完整性，并排查不同设备与环境的兼容性；第二步邀请同学在无指导状态下独立使用，检验可用性与流畅度；第三步通过问卷和访谈收集报错、卡点与改进建议；第四步根据反馈修复和优化，再交由同学复测。对比每轮迭代前后的程序稳定性与用户任务表现，将测试与改进记录归档至 Final Report。这是后续验证计划，不代表已经完成测试。"
+        },
+        {
+          "title": "下一步：把每一轮做扎实",
+          "time": 35,
+          "note": "以“让每一次理解，都化为自主的表达”收束，并结合水滴石穿的格言强调持续练习。i+1 表示可理解的挑战，Δ Ability 表示从理解到运用的目标，i++ 表示完成一轮并积累记录。下一步按前页方案校验程序、邀请同学实测、收集反馈并持续迭代。可点击“回看演示”返回写作工作台，或查看研究依据。"
+        }
+      ];
+      const presentationDuration=meta.reduce((total,page)=>total+page.time,0);
+
+      function fitPresentation(){
+        const scale=Math.min(window.innerWidth/1440,Math.max(1,window.innerHeight-68)/810);
+        document.documentElement.style.setProperty('--presentation-scale',scale);
+        document.documentElement.style.setProperty('--presentation-top',Math.max(0,(window.innerHeight-68-810*scale)/2)+'px');
+      }
+      window.addEventListener('resize',fitPresentation);fitPresentation();
+      let inputStage=0, waveRunning=false;
+      function setWaveAnimation(on){
+        waveRunning=on;document.body.classList.toggle('is-playing',on);
+        $('playMaterial').textContent=on?'Ⅱ 暂停音频':'▶ 播放音频';
+        $('playMaterial').setAttribute('aria-pressed',String(on));
+        $('audioStatus').textContent=on?['首听 · 抓住话题与态度','精读 · 对照字幕，核对理解','复听 · 关注语流与节奏'][inputStage]:(inputStage===1?'精读 · 对照字幕，核对理解':'已暂停 · 点击播放继续');
+      }
+      function stopMaterial(){setWaveAnimation(false);}
+      function setReadingAssist(mode){
+        const analysis=mode==='analysis', translation=mode==='translation';
+        $('sentenceAnalysis').hidden=!analysis;$('hint').hidden=!translation;$('readingIntro').hidden=analysis||translation;
+        $('sentence').classList.toggle('focused',analysis||translation);
+        $('focusSentence').setAttribute('aria-pressed',String(analysis));
+        $('focusSentence').textContent=analysis?'收起句子解析':'AI 拆解核心句';
+        $('hintButton').setAttribute('aria-expanded',String(translation));
+        $('hintButton').textContent=translation?'收起参考译文':'参考译文 · 全段对照';
+        $('readingHelpTitle').textContent=translation?'参考译文 · 全段对照':'读懂句子，也读懂条件';
+      }
+      function setInputStage(n){stopMaterial();inputStage=n;document.querySelectorAll('[data-listen-stage]').forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.listenStage===n)));$('readingPanel').hidden=n!==1;$('readingHelp').hidden=n!==1;$('inputGuidance').hidden=n===1;$('listeningCover').hidden=n===1;
+        $('listenBadge').textContent=['首听 · 无辅助','阅读 · 英文字幕','复听 · 无字幕'][n];
+        $('stageNumber').textContent=['01 / FIRST LISTEN','02 / READ & UNDERSTAND','03 / LISTEN AGAIN'][n];
+        $('stageTitle').textContent=['先抓住话题与态度','读懂句子，也读懂条件','把读懂的表达，再听一遍'][n];
+        $('stageDescription').textContent=['听完后想一想：这段话在谈什么？说话人是在推荐，还是有所保留？','对照三句字幕，核对刚才的理解。借助 AI 解析，读懂 may 的语气、when 的条件和 however 的转折。','再听同一段材料，留意语块、重音与停顿。试着跟上语流，听出刚才读懂的条件与转折。'][n];
+        $('stageTakeaway').textContent=['一个大意，以及一处想进一步听懂的细节。','理解观点的条件与边界，学会用 when 说明前提。','把文字理解与声音连接起来，为独立表达积累语感。'][n];
+        $('listenPrompt').textContent=n===2?'这一次，试着跟上整段话。':'不必听清每个词，先抓住大意。';$('listenSub').textContent=n===2?'收起文字，留意语流、重音与停顿，听出句子之间的联系。':'完整听一遍，留意这段话在谈什么、表达什么态度。';
+        $('advanceInput').textContent=['对照字幕，核对理解 →','收起字幕，再听一遍 →','用自己的话，写摘要 →'][n];setWaveAnimation(n!==1);if(n!==1)setReadingAssist(null);
+      }
+      document.querySelectorAll('[data-listen-stage]').forEach(b=>b.onclick=()=>setInputStage(+b.dataset.listenStage));
+      $('advanceInput').onclick=()=>{if(inputStage<2)setInputStage(inputStage+1);else go(6)};
+      $('playMaterial').onclick=()=>setWaveAnimation(!waveRunning);
+      let current=0,running=false,elapsed=0,last=performance.now(),toastHandle;
+
+      const formulaCarousels=[...document.querySelectorAll('.formula-carousel')].map(host=>{
+        const items=[...host.querySelectorAll('.formula-item')],buttons=[...host.querySelectorAll('[data-formula-index]')];
+        let index=0,timer;
+        function show(n){
+          index=n;items.forEach((item,i)=>item.hidden=i!==n);buttons.forEach((button,i)=>button.setAttribute('aria-pressed',String(i===n)));
+        }
+
+        function start(){
+          clearInterval(timer);if(!host.closest('.slide').hidden&&!document.hidden)timer=setInterval(()=>show((index+1)%items.length),2000);
+        }
+        buttons.forEach((button,i)=>button.addEventListener('click',()=>{show(i);start()}));
+        document.addEventListener('visibilitychange',start);
+        return {reset(){show(0);start()}};
+      });
+
+      function fmt(s){return String(Math.floor(s/60)).padStart(2,'0')+':'+String(Math.floor(s%60)).padStart(2,'0')}
+      function go(n){stopMaterial();current=Math.max(0,Math.min(slides.length-1,n));slides.forEach((s,i)=>{s.hidden=i!==current;s.inert=i!==current});if(current===5)setWaveAnimation(inputStage!==1);if(current===6)resetWritingDemo();formulaCarousels.forEach(carousel=>carousel.reset());$('counter').textContent=String(current+1).padStart(2,'0')+' / '+slides.length;$('prev').disabled=current===0;$('next').disabled=current===slides.length-1;$('progress').style.width=((current+1)/slides.length*100)+'%';history.replaceState(null,'','#'+(current+1));window.scrollTo(0,0);document.title=(current+1)+' · '+meta[current].title+' | Increment'}
+      function toast(t){$('toast').textContent=t;$('toast').hidden=false;clearTimeout(toastHandle);toastHandle=setTimeout(()=>$('toast').hidden=true,4000)}
+      $('prev').onclick=()=>go(current-1);$('next').onclick=()=>go(current+1);document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>go(+b.dataset.go));
+      function open(id){$(id).showModal()}document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>b.closest('dialog').close());document.querySelectorAll('[data-sources]').forEach(b=>b.onclick=()=>open('sourcesDialog'));
+      $('overview').onclick=()=>open('overviewDialog');meta.forEach((s,i)=>{const b=document.createElement('button');b.textContent=String(i+1).padStart(2,'0')+' / '+s.title+' · '+fmt(s.time);b.onclick=()=>{$('overviewDialog').close();go(i)};$('overviewGrid').append(b)});
+      $('notes').onclick=()=>{const s=meta[current],start=meta.slice(0,current).reduce((a,b)=>a+b.time,0);$('notesTitle').textContent=s.title;$('notesBody').replaceChildren();for(const text of ['建议用时 '+fmt(s.time)+' · 累计 '+fmt(start)+'–'+fmt(start+s.time),s.note]){const p=document.createElement('p');p.textContent=text;$('notesBody').append(p)}open('notesDialog')};
+      $('presenter').onclick=()=>{const on=document.body.classList.toggle('rehearsal');$('presenter').textContent=on?'退出排练':'排练 P';if(!on){running=false;$('timer').textContent='继续'}};
+      $('timer').onclick=()=>{running=!running;last=performance.now();$('timer').textContent=running?'暂停':'继续'};$('resetTimer').onclick=()=>{running=false;elapsed=0;$('clock').textContent='00:00';$('clock').classList.remove('over');$('timer').textContent='开始'};
+      $('rehearse').onclick=()=>{$('overviewDialog').close();if(!document.body.classList.contains('rehearsal'))$('presenter').click();$('resetTimer').click();go(0);$('timer').click()};setInterval(()=>{const now=performance.now();if(running){elapsed+=(now-last)/1000;$('clock').textContent=fmt(elapsed);$('clock').classList.toggle('over',elapsed>=presentationDuration)}last=now},250);
+      $('full').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else if(document.documentElement.requestFullscreen)await document.documentElement.requestFullscreen();else toast('请使用浏览器菜单进入全屏。')}catch{toast('无法进入网页全屏，请使用浏览器菜单。')}};
+      document.addEventListener('keydown',e=>{if(e.ctrlKey||e.metaKey||e.altKey||e.target.closest('input,textarea,select,[contenteditable]')||document.querySelector('dialog[open]'))return;const k=e.key.toLowerCase();if(['arrowright','pagedown'].includes(k)||(k===' '&&!e.target.closest('button,a'))){e.preventDefault();go(current+1)}else if(['arrowleft','pageup'].includes(k)){e.preventDefault();go(current-1)}else if(k==='home'){e.preventDefault();go(0)}else if(k==='end'){e.preventDefault();go(slides.length-1)}else if({o:'overview',n:'notes',p:'presenter',f:'full'}[k]){e.preventDefault();$({o:'overview',n:'notes',p:'presenter',f:'full'}[k]).click()}});
+      function density(n){$('coverage').replaceChildren();for(let i=0;i<100;i++){const dot=document.createElement('i');dot.className=i<n?'unknown':'';$('coverage').append(dot)}$('coverage').setAttribute('aria-label','100词中约'+n+'个生词');$('densityLabel').textContent='每 100 词，约 '+n+' 个生词';document.querySelectorAll('[data-density]').forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.density===n)))}document.querySelectorAll('[data-density]').forEach(b=>b.onclick=()=>density(+b.dataset.density));density(5);
+      $('focusSentence').onclick=()=>setReadingAssist($('sentenceAnalysis').hidden?'analysis':null);
+      $('hintButton').onclick=()=>setReadingAssist($('hint').hidden?'translation':null);
+      const initialDraft='Flexible working give employees more control over their schedules. It always improves job satisfaction.';
+      const revisedDraft='Flexible working gives employees more control over their schedules and may increase job satisfaction when teams coordinate well. However, unclear communication can cause confusion.';
+      let firstDraft='',reviewed=false,completed=false,writingPhase='write',sampleReview=false,keepExpression=false;
+      const newCycleId=()=>globalThis.crypto?.randomUUID?.()||String(Date.now())+'-'+Math.random().toString(36).slice(2);
+      let cycleId=newCycleId(),completions=[];
+      try{const stored=JSON.parse(localStorage.getItem('increment-pitch-completions-v1')||'[]');if(Array.isArray(stored))completions=stored.filter(r=>r&&typeof r.id==='string'&&typeof r.completedAt==='string')}catch{}
+      const normalizeDraft=text=>text.trim().replace(/\s+/g,' ');
+      function count(){
+        const value=$('draft').value.trim();
+        $('wordCount').textContent=(value.match(/\b[\w’-]+\b/g)||[]).length+' 词 · 建议 2–3 句';
+        $('feedbackButton').disabled=!value;
+        $('completeCycle').disabled=!value||(!keepExpression&&normalizeDraft(value)===normalizeDraft(firstDraft));
+      }
+      function setOutputStage(stage){
+        writingPhase=stage;
+        const currentStep=stage==='write'?0:stage==='review'?1:2;
+        ['write','review','revise'].forEach((name,i)=>{
+          const item=$(name+'Step');item.classList.toggle('active',i===currentStep);
+          item.classList.toggle('is-done',i<currentStep||stage==='done');
+          if(i===currentStep)item.setAttribute('aria-current','step');else item.removeAttribute('aria-current');
+        });
+        $('writingBench').classList.toggle('reviewing',stage!=='write');
+        $('writingBench').classList.toggle('is-complete',stage==='done');
+        $('writingState').textContent={write:'04 / 独立写作',review:sampleReview?'05 / 反馈示例':'05 / 对照自查',revise:'06 / 修改表达',done:'本轮已完成'}[stage];
+        $('draftLabel').textContent={write:'用自己的话，概括这段材料。',review:'先看反馈，找出初稿的改进点。',revise:'保留自己的表达，把意思说准确。',done:'本轮已完成'}[stage];
+        $('writingGuide').textContent={write:'先写 2–3 句英文，也可使用示例初稿体验完整流程。',review:'初稿已保留。读完右侧建议，再点击“开始修订”。',revise:sampleReview?'根据反馈修改，也可填入修订示例后继续润色。':'对照原文修改；核对后也可以选择保留当前表述。',done:'回看两版表达，发现这一轮的变化。'}[stage];
+        $('draft').readOnly=stage==='review'||stage==='done';
+        $('revision').hidden=stage==='write';
+        $('sample').hidden=stage!=='write';$('feedbackButton').hidden=stage!=='write';
+        $('editDraft').hidden=!['review','revise'].includes(stage);
+        $('revise').hidden=stage!=='review';
+        $('applyRevision').hidden=stage!=='revise'||!sampleReview;
+        $('keep').hidden=stage!=='revise';
+        $('completeCycle').hidden=stage!=='revise';
+        $('restartDemo').hidden=stage!=='done';$('nextWritingPage').hidden=stage!=='done';
+        count();
+      }
+      function resetWritingDemo(draft=''){
+        firstDraft='';reviewed=false;completed=false;sampleReview=false;keepExpression=false;cycleId=newCycleId();
+        $('draft').value=draft;$('draft').scrollTop=0;$('draft').scrollLeft=0;
+        $('feedback').replaceChildren();$('completionStatus').textContent='';
+        clearTimeout(toastHandle);$('toast').hidden=true;$('toast').textContent='';
+        setOutputStage('write');
+        try{localStorage.removeItem('increment-pitch-draft-v2')}catch{}
+      }
+      $('draft').oninput=()=>{keepExpression=false;$('completionStatus').textContent='';count();};
+      $('sample').onclick=()=>{resetWritingDemo(initialDraft);$('draft').focus({preventScroll:true});};
+      $('feedbackButton').onclick=()=>{
+        const draft=$('draft').value.trim();if(!draft)return;
+        firstDraft=draft;reviewed=true;keepExpression=false;
+        sampleReview=normalizeDraft(draft)===normalizeDraft(initialDraft);
+        $('feedback').innerHTML=sampleReview
+          ?'<span class="feedback-label">AI / 反馈示例</span><h3 id="feedbackTitle" tabindex="-1">先改意思，再改表达。</h3><div class="review-point"><b>01 · 内容</b><p>“always improves” 写得过于绝对。补回团队协作的条件，以及沟通不足的风险。</p></div><div class="review-point"><b>02 · 语法</b><p>Flexible working 是单数主语，give 应改为 gives。</p></div><p class="quote">原文依据：… may improve job satisfaction <u>when teams coordinate effectively</u>.</p>'
+          :'<span class="feedback-label">CHECK / 对照自查</span><h3 id="feedbackTitle" tabindex="-1">核对你的意思是否完整。</h3><p>自由输入采用原文自查，请核对三点：时间自主性、有效协作的条件，以及沟通不足的风险。若使用本轮目标表达 when，核对它是否说明成立条件。</p><p class="quote">Flexible working may improve job satisfaction when teams coordinate effectively. Without clear communication, however, it can lead to confusion.</p><small>此处未连接 AI，不对自由输入生成自动评分。</small>';
+        setOutputStage('review');$('feedbackTitle').focus({preventScroll:true});
+      };
+      $('editDraft').onclick=()=>{
+        reviewed=false;firstDraft='';keepExpression=false;$('completionStatus').textContent='';
+        $('feedback').replaceChildren();setOutputStage('write');$('draft').focus({preventScroll:true});
+      };
+      $('revise').onclick=()=>{if(!reviewed)return;setOutputStage('revise');$('draft').focus({preventScroll:true});};
+      $('applyRevision').onclick=()=>{
+        if(!sampleReview||writingPhase!=='revise')return;
+        $('draft').value=revisedDraft;keepExpression=false;count();
+        $('writingGuide').textContent='修订示例已填入。可继续润色，完成后查看前后对照。';
+        $('draft').focus({preventScroll:true});
+      };
+      $('keep').onclick=()=>{
+        if(writingPhase!=='revise')return;keepExpression=true;count();
+        $('writingGuide').textContent='已选择保留当前表述。核对无误后，可完成并查看两版对照。';
+      };
+      $('completeCycle').onclick=()=>{
+        if(completed||!reviewed||writingPhase!=='revise'||$('completeCycle').disabled)return;
+        const finalDraft=$('draft').value.trim(),record={id:cycleId,completedAt:new Date().toISOString()};
+        if(!completions.some(r=>r.id===cycleId))completions.push(record);
+        let persisted=true;try{localStorage.setItem('increment-pitch-completions-v1',JSON.stringify(completions))}catch{persisted=false}
+        completed=true;
+        const host=$('feedback');host.replaceChildren();
+        const label=document.createElement('span');label.className='feedback-label';label.textContent='REVIEW / 本轮回顾';
+        const title=document.createElement('h3');title.id='comparisonTitle';title.tabIndex=-1;
+        title.textContent=normalizeDraft(firstDraft)===normalizeDraft(finalDraft)?'核对之后，保留自己的表达。':'从理解到表达，看见这一轮的变化。';
+        const grid=document.createElement('div');grid.className='comparison';
+        for(const [name,text]of [['初稿',firstDraft],['完成时的表达',finalDraft]]){
+          const card=document.createElement('div'),heading=document.createElement('h3'),paragraph=document.createElement('p');
+          heading.textContent=name;paragraph.textContent=text;card.append(heading,paragraph);grid.append(card);
+        }
+        host.append(label,title,grid);setOutputStage('done');
+        $('completionStatus').textContent='已完成一轮 · 累计 '+completions.length+' 轮 · '+(persisted?'已记入完成记录':'本次记录暂留当前页面');
+        $('comparisonTitle').focus({preventScroll:true});
+      };
+      $('restartDemo').onclick=()=>{resetWritingDemo();$('sample').focus({preventScroll:true});};
+      $('nextWritingPage').onclick=()=>go(7);
+      document.querySelectorAll('[data-path]').forEach(b=>b.onclick=()=>{const speaking=b.dataset.path==='speaking';document.querySelectorAll('[data-path]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));$('pathContent').innerHTML=speaking?'<strong>20–25 <small>分钟</small></strong><h3>核心流程 + 录音、回听与自评</h3><p>按需选择口语，不影响自增循环。</p>':'<strong>15–20 <small>分钟</small></strong><h3>听、读、写、审阅与完成</h3><p>安静练习，也能完成一轮。</p>'});
+      function fromHash(){const n=Number(location.hash.slice(1));go(Number.isInteger(n)&&n>=1&&n<=slides.length?n-1:0)}addEventListener('hashchange',fromHash);fromHash();
+    </script>
+  </body>
+</html>
