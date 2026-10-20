@@ -27,10 +27,10 @@ This sequence forms a repeatable practice cycle. The core cycle is expected to t
 | 2. Read for meaning | Read the timestamped English subtitles, request AI analysis of sentence components and grammar as needed, consult essential notes, and write down three to five keywords. Choose one understood but underused expression as the session target. |
 | 3. Listen again | Use subtitle timestamps to replay one or two difficult passages, then listen to the full excerpt again with subtitles off. Imitating the speaker aloud is optional. |
 | 4. Retell aloud — optional | Use the selected keywords and cues to record a 45–60-second retelling, add a personal view with a reason, and try the target expression. Listen back and self-assess, or skip directly to writing. |
-| 5. Write independently | With the source, keywords and previous responses hidden, write 80–100 words explaining the speaker's point, supporting reasons and the learner's own view. |
-| 6. Review and complete | Review the large language model's (LLM's) written feedback and revise or retain the response. Learners who choose speaking practice can also record another attempt based on their self-assessment. Once the cycle is complete, the app automatically records completion. |
+| 5. Write independently | With the source, keywords and previous responses hidden, write an 80–100-word summary in the learner's own words, preserving the speaker's main point, supporting reasons, conditions and qualifications. A separate personal opinion is not required. The web demonstration uses two to three sentences to illustrate the same process. |
+| 6. Review and complete | Review the writing using the support available in the chosen tier: basic rule-based self-checks in Free or the large language model's (LLM's) evaluation in Pro. Revise or retain the response. Learners who choose speaking practice can also record another attempt based on their self-assessment. Once the cycle is complete, the app automatically records completion. |
 
-During writing review, the LLM evaluates the learner's response for accurate meaning, logical organisation, grammar and appropriate expression, using the subtitles, prepared key points and session target as references. It flags **at most one content issue and one expression issue**, with references to the relevant source passages. For imported materials without prepared key points, the matching transcript serves as the content reference. Feedback focuses on accurate meaning and appropriate use of the target expression. Alternative wording is accepted when it preserves the meaning. Learners decide whether to revise or retain their wording after checking the feedback against the source.
+During AI-assisted writing review, the LLM evaluates the learner's response for accurate meaning, information completeness, logical organisation, grammar and appropriate expression, using the subtitles, prepared key points and session target as references. Feedback is prioritised: address logical or meaning-related deviations first, then offer wording and grammar suggestions, with references to the relevant source passages. Suggestions should remain concise and manageable. For imported materials without prepared key points, the matching transcript serves as the content reference. Feedback focuses on accurate meaning and appropriate use of the target expression. Alternative wording is accepted when it preserves the meaning. Learners decide whether to revise or retain their wording after checking the feedback against the source. Free users follow the same review-and-complete sequence with basic rule-based self-checks; the proposed tiers are described in Section 4.3.
 
 A cycle is complete when the learner finishes listening, reading and listening again, writes independently, and finishes reviewing and revising or retaining the response. The app automatically adds a dated completion record and increments the count once for that cycle. There is no separate save step or required reflection form. The completion history shows completed cycles and daily practice dates; it is not a collection of writing drafts or expression cards. Speaking and self-assessment are optional and do not determine completion.
 
@@ -41,7 +41,7 @@ A cycle is complete when the learner finishes listening, reading and listening a
 | Content import | Bring personally relevant material into the same practice cycle. | Local audio/video import, subtitle and transcript parsing, media-text pairing, timing preview and excerpt selection. |
 | Listening and reading | Understand moderately challenging material with support as needed, then listen again without subtitles. | Difficulty descriptions, video/audio access, timestamped subtitles, sentence replay, notes, subtitle controls and AI-assisted “Sentence Focus” analysis of sentence components and grammar. |
 | Speaking — optional | Retell from keywords, try the target expression, and listen back to assess the attempt. | Enable or skip speaking, target expression, keyword notes, structural cues, recording, playback, rerecording, a self-assessment checklist and local recordings for playback. |
-| Writing | Write independently to check whether understood language can be used appropriately. | Writing workspace, word count, AI evaluation of meaning, organisation and language use, source references, and comparison of initial and revised responses within the current cycle. |
+| Writing | Summarise the material independently to check whether understood language can be used appropriately. | Writing workspace, word count, basic rule-based self-checks in Free, AI evaluation of meaning, organisation and language use in Pro, source references, and comparison of initial and revised responses within the current cycle. |
 | Completion history | Make daily use and completed cycles visible, encouraging learners to return for another session. | Automatically recorded completion dates, cycle count and an entry point for daily practice. |
 
 “Sentence Focus” presents AI-assisted analysis of a selected sentence: subject, predicate, object or complement, modifiers, clause relationships and relevant grammar. It links each explanation to the corresponding words in the original sentence, helping learners grasp the main idea before working through the full sentence. Negation, conditions and limits to a claim remain clearly marked so that essential meaning is not lost. Each cycle concentrates on one expression target, with accurate and clear use as the goal.
@@ -63,7 +63,7 @@ Material suitability depends on whether learners can understand the main content
 
 The first version supports local content import, timeline parsing, audio-text pairing, automatic completion records and temporary draft recovery for interrupted cycles. For both built-in and imported materials, learners can select a sentence and request AI analysis using the surrounding transcript as context. The analysis identifies the main clause, sentence components, modifiers and relevant grammar while preserving negation, conditions and qualifications. If the LLM service is unavailable, learners can continue reading the original text and review their writing with a checklist; recording and playback remain available. Automatic material recommendations and cloud synchronisation are outside the initial scope.
 
-The two AI tasks have separate inputs and outputs. Reading analysis is requested on demand for a selected sentence and explains how the original language works. Writing evaluation follows the learner's independent response, gives a brief assessment and prioritises at most one content issue and one expression issue for revision. AI does not produce the learner's initial answer. Material selection, media import, timeline alignment, listening playback, speaking tools and completion counting remain app functions.
+The two AI tasks have separate inputs and outputs. Reading analysis is requested on demand for a selected sentence and explains how the original language works. Writing evaluation follows the learner's independent response, gives a brief assessment and prioritises logical and meaning-related issues before wording and grammar suggestions. The depth of support follows the proposed offer in Section 4.3, with basic rule-based writing self-checks in Free and deeper AI evaluation in Pro. AI does not produce the learner's initial answer. Material selection, media import, timeline alignment, listening playback, speaking tools and completion counting remain app functions.
 
 ### 1.5 Bring Your Own Content
 
@@ -80,6 +80,17 @@ The import flow is **choose files → pair media and text → preview and check 
 Imported files remain local. The learner chooses the excerpt and expression target; the written-feedback request uses the selected transcript, target and response. Prepared key points are included for built-in materials; for imported content, the transcript is the reference and learner notes are optional. The model cites that text when giving feedback. Reading-analysis requests include the selected sentence and its surrounding text; writing-evaluation requests include the transcript, target and learner response. File import, timestamp parsing, playback and completion recording are handled by the app.
 
 The completion rule is the same for both material sources: finishing the core cycle automatically creates one completion record. Daily use can start with another personally relevant excerpt, with the built-in library available whenever learners prefer a ready-made task.
+
+### 1.6 Planned Product Extensions
+
+The commercial roadmap extends the individual practice cycle into academic content, voluntary sharing and institutional use. These are proposed additions rather than completed features or confirmed partnerships.
+
+| Extension | Proposed use and timing |
+|---|---|
+| Dedicated presentation-material library | Provide material for academic presentations and reports as part of the proposed Pro Academic offer. |
+| Initial-versus-final writing cards | Let learners choose to create and share a comparison of their own drafts during the months 3–8 content-marketing phase. Sharing is optional and is not required to complete a cycle; completion history continues to record dates and cycle counts. |
+| Class learning dashboard | Explore a dashboard for university English for Academic Purposes (EAP) and English for Specific Purposes (ESP) teaching teams during the months 8–18 institutional phase. This requires separate development beyond the initial local practice scope. |
+| Joint academic practice libraries | Seek university and test-preparation partners to develop IELTS/TOEFL academic micro-practice materials during the months 8–18 phase. |
 
 ## 2. Unique Selling Proposition
 
@@ -100,13 +111,37 @@ Material selection, comprehension, writing, review and further practice are orga
 |---|---|
 | Watching videos and reading subtitles | A task that asks learners to use understood language in their own writing, with an optional spoken retelling. |
 | Using separate playback, note-taking and recording tools | A coordinated sequence with pause-and-resume support and automatic completion records. |
-| Asking a general-purpose AI tool to correct writing | Limited feedback tied to the session target, followed by learner-led revision and further practice. |
+| Asking a general-purpose AI tool to correct writing | Prioritised feedback tied to the session target, followed by learner-led revision and further practice. |
+
+### 2.1 Competitive Positioning
+
+The Chinese pitch compares three common ways of using existing products. The comparison below concerns those workflows rather than a comprehensive assessment of every product's capabilities.
+
+| Product examples and usage pattern | Limitation addressed by Increment | Increment's proposed response |
+|---|---|---|
+| Duolingo / Baicizhan (百词斩): fragmented vocabulary memorisation and word-selection exercises | Isolated word practice does not by itself provide a complete task for organising a logical paragraph in a complex context. | Start from a short, coherent source and require an independent summary that preserves its reasons and conditions. |
+| Grammarly / DeepL: passive correction or one-click rewriting | When the tool does the rewriting, the learner may have little opportunity to retrieve and use the language independently. | Require an initial response before review, then let the learner revise or retain their own wording. |
+| ChatGPT / Claude: direct generation through a general-purpose model | Learners must construct their own learning prompts and support sequence; accepting a generated full answer can encourage dependence. | Provide a guided input-to-expression cycle and prioritised review without generating the learner's initial answer. |
+
+Increment's intended niche combines short source materials, required independent expression, and review of logic and conditions. Whether learners value this combination remains to be tested.
 
 ## 3. Target Users and Persona
 
 ### 3.1 Target Users
 
-The target audience is Chinese university students from their second undergraduate year to their first postgraduate year who need to participate in English-medium instruction (EMI) discussions and deliver presentations in English. Initial trials will focus on students interested in technology and learning who have basic listening and reading proficiency but find it difficult to use familiar language independently.
+The initial target audience is Chinese university students from their second undergraduate year to their first postgraduate year who need to participate in English-medium instruction (EMI) discussions and deliver presentations in English. Initial trials will focus on students interested in technology and learning who have basic listening and reading proficiency but find it difficult to use familiar language independently.
+
+The wider market includes university learners with advanced CET-4/CET-6 preparation needs, postgraduate entrance-examination needs, English academic-reading tasks, and IELTS/TOEFL preparation needs. These are potential expansion groups; the initial focus remains students with frequent English presentation and report tasks, particularly in business and computing-related programmes, joint Chinese–international programmes and international colleges.
+
+The Chinese pitch uses the following preliminary population estimates:
+
+| Market layer | Preliminary size | Population and needs |
+|---|---|---|
+| Total addressable market (TAM) | 40 million learners | University English learners in China, including advanced CET-4/CET-6 preparation, postgraduate entrance-examination preparation and English academic-reading needs. |
+| Serviceable available market (SAM) | 1.2 million learners | The academic and EMI core group, including joint Chinese–international programmes, English-medium majors and IELTS/TOEFL candidates. |
+| Serviceable obtainable market (SOM) | 80,000–100,000 learners | The early core target population: business and computing-related students who frequently face English presentations and reports. |
+
+These figures are preliminary project estimates awaiting research and checks for overlap between groups. They are not verified demand or observed customer numbers. SOM denotes the early target-population size used in the pitch, not a first-year acquisition commitment. The first-year operating target is stated separately in Section 4.4.
 
 **Illustrative persona: Xiaolin, 21, a third-year computing student in a joint Chinese–international degree programme.**
 
@@ -131,7 +166,7 @@ The target audience is Chinese university students from their second undergradua
 | Struggles with complex sentence structure | Request AI analysis through Sentence Focus to identify sentence components, clause relationships and grammatical usage, with negation and conditions kept visible. |
 | Understands the content but cannot express it independently | Choose one understood but underused expression, practise with keywords and structural cues, then gradually reduce support. |
 | Does not clearly connect a view with its reasons | Use a short written response and feedback to check logical connections. Speaking participants can also listen back and self-assess. |
-| Worries about evaluation or cannot speak aloud | Complete the core cycle without speaking. Optional speaking uses private recordings and self-assessment; written feedback limits the number of issues raised. |
+| Worries about evaluation or cannot speak aloud | Complete the core cycle without speaking. Optional speaking uses private recordings and self-assessment; written feedback prioritises the most useful changes and keeps explanations manageable. |
 | Finds available material unrelated to personal interests or coursework | Import personally relevant audio or video with matching timestamped text and select a short practice excerpt. |
 | Interrupts practice or struggles to practise regularly | Resume an unfinished cycle, then see completed cycles and practice dates in the completion history. Return each day for another session. |
 
@@ -161,7 +196,9 @@ Learners adjust support based on comprehension and self-assessment. If the sourc
 
 Daily practice follows the same core cycle. Learners choose suitable material and a target for that session; they may encounter and reuse familiar expressions naturally. Each completed cycle is recorded once, including when optional speaking is skipped.
 
-## 4. Marketing Channels
+## 4. Business Model and Marketing Strategy
+
+### 4.1 Marketing Channels
 
 Promotion will prioritise students with upcoming English discussion and presentation tasks. It will explain the app's purpose, practice method and time requirements, and help students start their first session. Outreach will begin with course groups and expand to relevant communities based on the response.
 
@@ -169,12 +206,43 @@ Promotion will prioritise students with upcoming English discussion and presenta
 |---|---|---|
 | EMI course groups and English presentation teams | Students have immediate discussion or presentation needs that connect directly to the practice task. | Share an approximately 60-second demonstration and prototype link, with material related to class topics to make the first session easy to start. |
 | Campus English communities and learning centres | Reach students who want to practise consistently and improve their expression. | Show a session target, a written revision and optional recordings. Explain both session lengths and the pause-and-resume feature. |
-| Technology interest groups and reading clubs | Technology and learning topics provide a natural basis for discussing ideas. | Introduce an excerpt through a discussion question and practice link. Invite students to write a personal response and optionally retell it aloud. |
+| Technology interest groups and reading clubs | Technology and learning topics provide a natural basis for discussing ideas. | Introduce an excerpt through a discussion question and practice link. Invite students to summarise the material independently and optionally retell it aloud. |
 | Referrals from trial participants | Students on similar courses often share the same tasks and practice needs. | Provide a short introduction and prototype link that participants can share with classmates. |
 
 Promotional materials will include a demonstration, a complete worked practice example and an accessible prototype link. Invitations will state that this is a course project, explain the expected time for the core and speaking-inclusive paths, and make clear that recording is optional.
 
 The team will track prototype visits and first-session starts by channel to assess how well each channel reaches the intended users. User experience and improvement suggestions will be collected through the methods in Section 5.
+
+### 4.2 Phased Market Entry
+
+| Phase | Proposed activity | Target or intended result |
+|---|---|---|
+| Months 0–3: campus launch | Run a 14-day challenge for joint Chinese–international programmes and international colleges, positioning the app as supplementary practice outside class. Recruit through course and campus communities. | Acquire the first 500 seed users with near-zero expected cash advertising expenditure. This is a recruitment target, not existing traction; team time and operating costs still need to be recorded. |
+| Months 3–8: focused content marketing | Publish “three-minute academic expression improvement” tutorials on Xiaohongshu and Bilibili. Let learners voluntarily share initial-versus-final writing cards to encourage peer referrals. | Expand acquisition through relevant content, practice check-ins and participant sharing. |
+| Months 8–18: institutional and test-preparation expansion | Approach university EAP/ESP teaching teams with a proposed class learning dashboard, and seek test-preparation partners to co-develop IELTS/TOEFL academic micro-practice libraries. | Test institutional adoption and conversion from relevant test-preparation use cases. Partnerships and dashboard delivery remain planned. |
+
+The 14-day challenge is a marketing campaign. The seven-day follow-up and validation sample sizes in Section 5 remain the product-testing plan.
+
+### 4.3 Proposed Free and Pro Offers
+
+The proposed model uses accessible daily practice to acquire learners and a paid academic offer for deeper support in presentation and report tasks.
+
+| Offer | Proposed price and access | Main features |
+|---|---|---|
+| Free Basic | Free; one standard practice cycle per day, presented as approximately 15 minutes in the commercial pitch. | Basic rule-based writing self-checks and personal content import, supporting a daily practice habit. The core-cycle planning range remains 15–20 minutes. |
+| Pro Academic | RMB 19 per month or RMB 69 per semester. | Unlimited practice cycles, deeper AI evaluation of academic logic and rigour, and a dedicated presentation-material library. |
+
+The commercial assumptions are an AI inference cost below RMB 0.03 per cycle and an expected gross margin above 75%. Pricing, inference cost and margin are hypotheses to validate rather than measured operating results. Actual gross margin depends on average practice frequency, AI requests per cycle, free-tier subsidy and other service costs; the per-cycle inference assumption alone does not establish the margin. Unlimited practice must therefore be assessed against observed usage and service costs.
+
+### 4.4 First-Year Operating Targets
+
+| Metric | Proposed target | Measurement basis |
+|---|---|---|
+| User acquisition | 15,000 users in the first year. | Track acquired users by channel and distinguish them from prototype visits and first-session starts. |
+| Following-month retention | At least 35%. | The share of newly acquired users who remain active in the following month. |
+| Paid conversion | 4–6%. | The share of newly acquired users who become paying users. |
+
+These are operating targets, not achieved results. The pricing, partnerships and growth assumptions will be examined through pilots and subsequent operating data. They are separate from the usability and return-use acceptance criteria in Section 5.
 
 ## 5. App Validation
 
