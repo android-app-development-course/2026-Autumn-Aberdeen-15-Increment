@@ -6,6 +6,7 @@
 <meta name="color-scheme" content="light">
 <meta name="description" content="Increment 第二阶段 UI 设计。以界面截图和完整录屏呈现用户界面流程、关键界面布局、配色字阶与交互动效。">
 <title>Increment · 第二阶段 UI 设计</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 108 108%22%3E%3Ccircle cx=%2254%22 cy=%2254%22 r=%2254%22 fill=%22%23a1390a%22/%3E%3Ccircle cx=%2229%22 cy=%2241%22 r=%224%22 fill=%22%23fff8f3%22/%3E%3Cpath d=%22M29 53v15 M42 58h16 M50 50v16 M66 58h16 M74 50v16%22 fill=%22none%22 stroke=%22%23fff8f3%22 stroke-width=%227.5%22 stroke-linecap=%22round%22/%3E%3C/svg%3E">
 <style>
 :root {
   --canvas: #fcf6ef;
@@ -35,7 +36,7 @@ h1, h2, p, figure, ul, ol { margin: 0 }
 .shell { min-width: 980px; min-height: 100dvh; display: grid; grid-template-columns: 162px minmax(0, 1fr) }
 .rail { position: sticky; top: 0; height: 100dvh; overflow: auto; display: flex; flex-direction: column; padding: 25px 12px 18px; background: var(--rail); color: var(--rail-ink) }
 .brand { display: flex; align-items: center; gap: 7px; font-size: 22px; font-weight: 720; letter-spacing: -.055em; line-height: 1.2 }
-.mark { display: grid; place-items: center; flex: 0 0 29px; height: 29px; border-radius: 50%; background: #ffb693; color: #591c00; font: 800 13px/1 var(--mono); letter-spacing: -.1em; padding-inline-end: 2px }
+.mark { display: block; flex: 0 0 29px; width: 29px; height: 29px }
 .edition { color: var(--rail-muted); font-size: 12px; margin-top: 10px }
 .chapters { display: grid; gap: 4px; margin-top: 26px }
 .chapters button { min-height: 43px; display: flex; align-items: center; gap: 8px; padding: 8px; font-size: 14px; border: 1px solid transparent; border-radius: 9px; background: transparent; text-align: left; white-space: nowrap }
@@ -159,7 +160,14 @@ dialog p { margin-top: 7px; max-width: 42ch; color: var(--muted); font-size: 13p
 <div class="shell">
   <aside class="rail">
     <div class="identity">
-      <div class="brand"><span class="mark" aria-hidden="true">i++</span>Increment</div>
+      <div class="brand">
+        <svg class="mark" viewBox="0 0 108 108" aria-hidden="true" focusable="false">
+          <circle cx="54" cy="54" r="54" fill="#a1390a"/>
+          <circle cx="29" cy="41" r="4" fill="#fff8f3"/>
+          <path d="M29 53v15 M42 58h16 M50 50v16 M66 58h16 M74 50v16" fill="none" stroke="#fff8f3" stroke-width="7.5" stroke-linecap="round"/>
+        </svg>
+        Increment
+      </div>
       <p class="edition">第二阶段 · UI 设计</p>
     </div>
     <nav class="chapters" id="chapters" aria-label="演示章节"></nav>
