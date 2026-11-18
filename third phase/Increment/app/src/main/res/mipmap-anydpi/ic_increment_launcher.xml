@@ -1,0 +1,6 @@
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/increment_mark_fill" />
+    <foreground>
+        <inset android:drawable="@drawable/ic_increment" android:inset="15%" />
+    </foreground>
+</adaptive-icon>

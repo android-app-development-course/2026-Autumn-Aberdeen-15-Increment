@@ -1,0 +1,5 @@
+<resources>
+    <color name="increment_mark_fill">#A1390A</color>
+    <color name="increment_mark_ink">#FFF8F3</color>
+    <color name="increment_launch_surface">#FFF8F4</color>
+</resources>

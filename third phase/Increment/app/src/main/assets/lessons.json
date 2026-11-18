@@ -1,0 +1,2153 @@
+[
+  {
+    "id": "ted_language_secrets",
+    "sourceUrl": "https://www.ted.com/talks/lydia_machova_the_secrets_of_learning_a_new_language",
+    "keyPoints": [
+      "演讲者发现，多语学习者的方法各异，但都找到了能享受学习过程的方式。",
+      "享受过程还不够。演讲者建议采用有效的方法，把学习安排进日常生活，并保持耐心。"
+    ],
+    "difficulty": "中级 · 以学习经历为例，注意如何从故事过渡到建议。",
+    "expressions": [
+      "enjoy the process",
+      "create a system in your learning"
+    ],
+    "title": "学习一门外语的秘密",
+    "english": "The secrets of learning a new language",
+    "topic": "语言学习",
+    "end": 645417,
+    "video": true,
+    "cues": [
+      {
+        "start": 13750,
+        "end": 16500,
+        "text": "I love learning foreign languages.",
+        "translation": "我喜欢学外语。"
+      },
+      {
+        "start": 16750,
+        "end": 20750,
+        "text": "In fact, I love it so much that I like to learn a new language every two years,",
+        "translation": "事实上，我喜欢到每两年就想学一门新语言，"
+      },
+      {
+        "start": 20750,
+        "end": 23000,
+        "text": "currently working on my eighth one.",
+        "translation": "现在正在学第八门。"
+      },
+      {
+        "start": 23000,
+        "end": 25500,
+        "text": "When people find that out about me, they always ask me,",
+        "translation": "人们知道这件事后，总会问我，"
+      },
+      {
+        "start": 25500,
+        "end": 27750,
+        "text": "“How do you do that? What's your secret?”",
+        "translation": "「你是怎么做到的？有什么秘诀？」"
+      },
+      {
+        "start": 27750,
+        "end": 30750,
+        "text": "And to be honest, for many years, my answer would be,",
+        "translation": "说实话，有很多年我都是这样回答的，"
+      },
+      {
+        "start": 30750,
+        "end": 33750,
+        "text": "“I don't know. I simply love learning languages.”",
+        "translation": "「我不知道。我就是喜欢学语言。」"
+      },
+      {
+        "start": 33750,
+        "end": 36000,
+        "text": "But people were never happy with that answer.",
+        "translation": "但人们对这个答案从来都不满意。"
+      },
+      {
+        "start": 36000,
+        "end": 40000,
+        "text": "They wanted to know why they are spending years trying to learn even one language,",
+        "translation": "他们想知道，为什么他们花了好几年，连一门外语"
+      },
+      {
+        "start": 40000,
+        "end": 41500,
+        "text": "never achieving fluency,",
+        "translation": "都没学到流利的程度，"
+      },
+      {
+        "start": 41500,
+        "end": 44750,
+        "text": "and here I come, learning one language after another.",
+        "translation": "而我却能学了一门又一门。"
+      },
+      {
+        "start": 44750,
+        "end": 47000,
+        "text": "They wanted to know the secret of polyglots,",
+        "translation": "他们想知道多语者的秘诀，"
+      },
+      {
+        "start": 47000,
+        "end": 49500,
+        "text": "people who speak a lot of languages.",
+        "translation": "也就是说，掌握多门语言的人是怎么做到的。"
+      },
+      {
+        "start": 49500,
+        "end": 51000,
+        "text": "And that made me wonder, too,",
+        "translation": "这也让我好奇起来，"
+      },
+      {
+        "start": 51000,
+        "end": 53250,
+        "text": "how do actually other polyglots do it?",
+        "translation": "其他多语者到底是怎么学的？"
+      },
+      {
+        "start": 53250,
+        "end": 54750,
+        "text": "What do we have in common?",
+        "translation": "我们有什么共同点？"
+      },
+      {
+        "start": 54750,
+        "end": 56750,
+        "text": "And what is it that enables us",
+        "translation": "究竟是什么让我们"
+      },
+      {
+        "start": 56750,
+        "end": 60000,
+        "text": "to learn languages so much faster than other people?",
+        "translation": "比其他人学得快那么多？"
+      },
+      {
+        "start": 60000,
+        "end": 63750,
+        "text": "I decided to meet other people like me and find that out.",
+        "translation": "我决定去见见其他和我一样的人，找出答案。"
+      },
+      {
+        "start": 63750,
+        "end": 65750,
+        "text": "The best place to meet a lot of polyglots",
+        "translation": "要遇到很多多语者，最好的去处"
+      },
+      {
+        "start": 65750,
+        "end": 68250,
+        "text": "is an event where hundreds of language lovers",
+        "translation": "是那种有几百名语言爱好者"
+      },
+      {
+        "start": 68250,
+        "end": 71250,
+        "text": "meet in one place to practice their languages.",
+        "translation": "聚在一起练习语言的活动。"
+      },
+      {
+        "start": 71250,
+        "end": 74500,
+        "text": "There are several such polyglot events organized all around the world,",
+        "translation": "世界各地都会举办这种多语者聚会，"
+      },
+      {
+        "start": 74500,
+        "end": 75750,
+        "text": "and so I decided to go there",
+        "translation": "所以我决定亲自去一趟，"
+      },
+      {
+        "start": 75750,
+        "end": 79250,
+        "text": "and ask polyglots about the methods that they use.",
+        "translation": "问问大家都在用什么方法。"
+      },
+      {
+        "start": 79250,
+        "end": 86150,
+        "text": "And so I met Benny from Ireland, who told me that his method is to start speaking from day one.",
+        "translation": "我遇到了来自爱尔兰的本尼。他说，他的方法是从第一天就开口。"
+      },
+      {
+        "start": 86150,
+        "end": 93850,
+        "text": "He learns a few phrases from a travel phrasebook and goes to meet native speakers and starts having conversations with them right away.",
+        "translation": "他从旅行会话手册里学几句，然后去找母语者，马上跟他们聊起来。"
+      },
+      {
+        "start": 93850,
+        "end": 99800,
+        "text": "He doesn't mind making even 200 mistakes a day, because that's how he learns, based on the feedback.",
+        "translation": "就算一天犯两百个错，他也不介意，因为他正是靠这些反馈来学习的。"
+      },
+      {
+        "start": 99800,
+        "end": 102850,
+        "text": "And the best thing is, he doesn't even need to travel a lot today,",
+        "translation": "最棒的是，如今他甚至不必大老远地出门，"
+      },
+      {
+        "start": 102850,
+        "end": 108200,
+        "text": "because you can easily have conversations with native speakers from the comfort of your living room, using websites.",
+        "translation": "因为你坐在自家客厅里，就能通过网站轻松找到母语者聊天。"
+      },
+      {
+        "start": 108200,
+        "end": 113150,
+        "text": "I also met Lucas from Brazil who had a really interesting method to learn Russian.",
+        "translation": "我还遇到了来自巴西的卢卡斯，他学俄语的方法很有意思。"
+      },
+      {
+        "start": 113150,
+        "end": 118850,
+        "text": "He simply added a hundred random Russian speakers on Skype as friends,",
+        "translation": "他随手在 Skype 上加了一百个说俄语的人为好友，"
+      },
+      {
+        "start": 118850,
+        "end": 125850,
+        "text": "and then he opened a chat window with one of them and wrote \"Hi\" in Russian.",
+        "translation": "然后打开其中一个人的聊天窗口，用俄语写了句「你好」。"
+      },
+      {
+        "start": 125850,
+        "end": 127850,
+        "text": "And the person replied, \"Hi, how are you?\"",
+        "translation": "对方回复说：「你好，你好吗？」"
+      },
+      {
+        "start": 127850,
+        "end": 132150,
+        "text": "Lucas copied this and put it into a text window with another person,",
+        "translation": "卢卡斯把这条回复复制到和另一个人的聊天窗口，"
+      },
+      {
+        "start": 132150,
+        "end": 135850,
+        "text": "and the person replied, \"I'm fine, thank you, and how are you?\"",
+        "translation": "那个人回道：「我很好，谢谢，你呢？」"
+      },
+      {
+        "start": 135850,
+        "end": 139650,
+        "text": "Lucas copied this back to the first person, and in this way,",
+        "translation": "卢卡斯再把这句话复制给第一个人。就这样，"
+      },
+      {
+        "start": 139650,
+        "end": 144850,
+        "text": "he had two strangers have a conversation with each other without knowing about it.",
+        "translation": "两个陌生人不知不觉聊了起来。"
+      },
+      {
+        "start": 144850,
+        "end": 146850,
+        "text": "And soon he would start typing himself,",
+        "translation": "很快，他就开始自己打字，"
+      },
+      {
+        "start": 146850,
+        "end": 151850,
+        "text": "because he had so many of these conversations that he figured out how the Russian conversation usually starts.",
+        "translation": "因为看过这么多次对话，他摸清了俄语聊天通常是怎么开头的。"
+      },
+      {
+        "start": 151850,
+        "end": 154000,
+        "text": "What an ingenious method, right?",
+        "translation": "这方法很巧妙，对吧？"
+      },
+      {
+        "start": 154000,
+        "end": 158600,
+        "text": "And then I met polyglots who always start by imitating sounds of the language,",
+        "translation": "后来我又遇到一些多语者，他们总是先模仿那门语言的发音，"
+      },
+      {
+        "start": 158600,
+        "end": 163350,
+        "text": "and others who always learn the 500 most frequent words of the language,",
+        "translation": "也有人总是先学那门语言中最常见的五百个词，"
+      },
+      {
+        "start": 163350,
+        "end": 167350,
+        "text": "and yet others who always start by reading about the grammar.",
+        "translation": "还有人总是先读语法。"
+      },
+      {
+        "start": 167350,
+        "end": 173350,
+        "text": "If I asked a hundred different polyglots, I heard a hundred different approaches to learning languages.",
+        "translation": "我问了一百个多语者，听到了一百种学语言的方法。"
+      },
+      {
+        "start": 173350,
+        "end": 177200,
+        "text": "Everybody seems to have a unique way they learn a language,",
+        "translation": "每个人似乎都有一套独特的学法，"
+      },
+      {
+        "start": 177200,
+        "end": 181600,
+        "text": "and yet we all come to the same result of speaking several languages fluently.",
+        "translation": "但最后都能流利地说好几门语言。"
+      },
+      {
+        "start": 181600,
+        "end": 186350,
+        "text": "And as I was listening to these polyglots telling me about their methods,",
+        "translation": "听他们介绍各自的方法时，"
+      },
+      {
+        "start": 186350,
+        "end": 188850,
+        "text": "it suddenly dawned on me:",
+        "translation": "我突然明白了，"
+      },
+      {
+        "start": 188850,
+        "end": 197350,
+        "text": "the one thing we all have in common is that we simply found ways to enjoy the language-learning process.",
+        "translation": "我们唯一的共同点，就是都找到了享受语言学习过程的办法。"
+      },
+      {
+        "start": 197350,
+        "end": 201350,
+        "text": "All of these polyglots were talking about language learning as if it was great fun.",
+        "translation": "这些多语者谈起学语言时，仿佛那是一件非常有趣的事。"
+      },
+      {
+        "start": 201350,
+        "end": 208350,
+        "text": "You should have seen their faces when they were showing me their colorful grammar charts and their carefully handmade flash cards,",
+        "translation": "你真该看看他们的表情，尤其是他们拿出五颜六色的语法图表和精心手制的单词卡时，"
+      },
+      {
+        "start": 208350,
+        "end": 212150,
+        "text": "and their statistics about learning vocabulary using apps,",
+        "translation": "还有人给我看自己用应用背词的统计数据，"
+      },
+      {
+        "start": 212150,
+        "end": 216750,
+        "text": "or even how they love to cook based on recipes in a foreign language.",
+        "translation": "甚至有人兴致勃勃地讲起自己怎么照着外语食谱做菜。"
+      },
+      {
+        "start": 216750,
+        "end": 218800,
+        "text": "All of them use different methods,",
+        "translation": "他们的方法各不相同，"
+      },
+      {
+        "start": 218800,
+        "end": 222600,
+        "text": "but they always make sure it's something that they personally enjoy.",
+        "translation": "但一定会选自己喜欢做的事。"
+      },
+      {
+        "start": 222600,
+        "end": 226600,
+        "text": "I realized that this is actually how I learn languages myself.",
+        "translation": "我意识到，我自己学语言其实也是这样。"
+      },
+      {
+        "start": 226600,
+        "end": 229700,
+        "text": "When I was learning Spanish, I was bored with the text in the textbook.",
+        "translation": "学西班牙语时，我觉得课本上的文章太无聊。"
+      },
+      {
+        "start": 229700,
+        "end": 234050,
+        "text": "I mean, who wants to read about Jose asking about the directions to the train station.",
+        "translation": "谁会想看何塞怎么问去火车站的路呢？"
+      },
+      {
+        "start": 234050,
+        "end": 239350,
+        "text": "Right? I wanted to read \"Harry Potter\" instead, because that was my favorite book as a child,",
+        "translation": "对吧？我宁愿读《哈利·波特》，那是我小时候最喜欢的书，"
+      },
+      {
+        "start": 239350,
+        "end": 240800,
+        "text": "and I have read it many times.",
+        "translation": "我已经读过好多遍了。"
+      },
+      {
+        "start": 240800,
+        "end": 244200,
+        "text": "So I got the Spanish translation of \"Harry Potter\" and started reading,",
+        "translation": "于是我找来《哈利·波特》的西班牙语译本，开始读起来。"
+      },
+      {
+        "start": 244200,
+        "end": 247850,
+        "text": "and sure enough, I didn't understand almost anything at the beginning,",
+        "translation": "果然，一开始我几乎什么都看不懂，"
+      },
+      {
+        "start": 247850,
+        "end": 249750,
+        "text": "but I kept on reading because I loved the book,",
+        "translation": "但我喜欢这本书，所以坚持读了下去。"
+      },
+      {
+        "start": 249750,
+        "end": 254350,
+        "text": "and by the end of the book, I was able to follow it almost without any problems.",
+        "translation": "读到书末时，我已经几乎毫不费力就能跟上情节了。"
+      },
+      {
+        "start": 254350,
+        "end": 256750,
+        "text": "And the same thing happened when I was learning German.",
+        "translation": "后来我学德语时，情况也一样。"
+      },
+      {
+        "start": 256750,
+        "end": 263150,
+        "text": "I decided to watch \"Friends,\" my favorite sitcom, in German, and again, at the beginning it was all just gibberish.",
+        "translation": "我决定看德语版《老友记》。这是我最喜欢的情景喜剧，但刚开始听起来完全是一团乱。"
+      },
+      {
+        "start": 263150,
+        "end": 269200,
+        "text": "I didn't know where one word finished and another one started, but I kept on watching every day because it's \"Friends.\"",
+        "translation": "我连词与词之间的分界都听不出来，却还是每天继续看，就因为那是《老友记》。"
+      },
+      {
+        "start": 269200,
+        "end": 271350,
+        "text": "I can watch it in any language. I love it so much.",
+        "translation": "不管什么语言的版本我都能看。我太喜欢它了。"
+      },
+      {
+        "start": 271350,
+        "end": 276650,
+        "text": "And after the second or third season, seriously, the dialogue started to make sense.",
+        "translation": "看到第二季或第三季之后，真的，我开始听懂对白了。"
+      },
+      {
+        "start": 276650,
+        "end": 280350,
+        "text": "I only realized this after meeting other polyglots.",
+        "translation": "直到见过其他多语者，我才意识到这一点。"
+      },
+      {
+        "start": 280350,
+        "end": 284350,
+        "text": "We are no geniuses and we have no shortcut to learning languages.",
+        "translation": "我们并不是天才，学语言也没有捷径。"
+      },
+      {
+        "start": 284350,
+        "end": 287850,
+        "text": "We simply found ways how to enjoy the process,",
+        "translation": "我们只是找到了享受学习过程的办法，"
+      },
+      {
+        "start": 287850,
+        "end": 294500,
+        "text": "how to turn language learning from a boring school subject into a pleasant activity which you don't mind doing every day.",
+        "translation": "把学语言从一门枯燥的学校科目，变成了每天做也不嫌烦的事。"
+      },
+      {
+        "start": 294500,
+        "end": 299350,
+        "text": "If you don't like writing words down on paper, you can always type them in an app.",
+        "translation": "如果你不喜欢把单词写在纸上，也可以在应用里输入。"
+      },
+      {
+        "start": 299350,
+        "end": 306200,
+        "text": "If you don't like listening to boring textbook material, find interesting content on YouTube or in podcasts for any language.",
+        "translation": "如果你不喜欢听枯燥的课本录音，可以去 YouTube 或播客找感兴趣的内容，不管你学的是哪门语言。"
+      },
+      {
+        "start": 306200,
+        "end": 313500,
+        "text": "If you're a more introverted person and you can't imagine speaking to native speakers right away, you can apply the method of self-talk.",
+        "translation": "如果你比较内向，一时想象不出自己跟母语者交谈的样子，可以试试自言自语。"
+      },
+      {
+        "start": 313500,
+        "end": 316350,
+        "text": "You can talk to yourself in the comfort of your room,",
+        "translation": "你可以自在地待在自己的房间里，对自己说话，"
+      },
+      {
+        "start": 316350,
+        "end": 319350,
+        "text": "describing your plans for the weekend, how your day has been,",
+        "translation": "讲讲周末的计划，或是今天过得怎么样，"
+      },
+      {
+        "start": 319350,
+        "end": 325350,
+        "text": "or even take a random picture from your phone and describe the picture to your imaginary friend.",
+        "translation": "甚至可以随手从手机里挑张照片，向想象中的朋友描述它。"
+      },
+      {
+        "start": 325350,
+        "end": 329250,
+        "text": "This is how polyglots learn languages, and the best news is,",
+        "translation": "多语者就是这样学语言的。最好的消息是，"
+      },
+      {
+        "start": 329250,
+        "end": 334350,
+        "text": "it's available to anyone who is willing to take the learning into their own hands.",
+        "translation": "只要愿意主动掌握自己的学习方式，任何人都可以这么做。"
+      },
+      {
+        "start": 334350,
+        "end": 341850,
+        "text": "So meeting other polyglots helped me realize that it is really crucial to find enjoyment in the process of learning languages,",
+        "translation": "认识其他多语者让我明白，学语言时找到乐趣确实非常重要，"
+      },
+      {
+        "start": 341850,
+        "end": 345850,
+        "text": "but also that joy in itself is not enough.",
+        "translation": "但光有乐趣还不够。"
+      },
+      {
+        "start": 345850,
+        "end": 351850,
+        "text": "If you want to achieve fluency in a foreign language, you'll also need to apply three more principles.",
+        "translation": "如果想把外语学到流利的程度，还要遵循另外三条原则。"
+      },
+      {
+        "start": 351850,
+        "end": 354850,
+        "text": "First of all, you'll need effective methods.",
+        "translation": "首先，你需要有效的方法。"
+      },
+      {
+        "start": 354850,
+        "end": 358850,
+        "text": "If you try to memorize a list of words for a test tomorrow,",
+        "translation": "如果你为了明天的考试临时背一张单词表，"
+      },
+      {
+        "start": 358850,
+        "end": 363350,
+        "text": "the words will be stored in your short-term memory and you'll forget them after a few days.",
+        "translation": "这些单词只会留在短期记忆里，过几天就忘了。"
+      },
+      {
+        "start": 363350,
+        "end": 366150,
+        "text": "If you, however, want to keep words long term,",
+        "translation": "但如果你想把单词长久记在脑子里，"
+      },
+      {
+        "start": 366150,
+        "end": 371350,
+        "text": "you need to revise them in the course of a few days repeatedly using the so-called space repetition.",
+        "translation": "就要在接下来的几天里反复复习，也就是使用所谓的间隔重复法。"
+      },
+      {
+        "start": 371350,
+        "end": 376300,
+        "text": "You can use apps which are based on this system such as Anki or Menmrrise,",
+        "translation": "你可以使用基于这套系统的应用，比如 Anki 或 Memrise，"
+      },
+      {
+        "start": 376300,
+        "end": 381600,
+        "text": "or you can write lists of word in a notebook using the Goldlist method, which is also very popular with many polyglots.",
+        "translation": "或者用笔记本按 Goldlist 法列单词表。这种方法在很多多语者中也很流行。"
+      },
+      {
+        "start": 381600,
+        "end": 385850,
+        "text": "If you're not sure which methods are effective and what is available out there,",
+        "translation": "如果你不确定哪些方法有效，也不知道有哪些选择，"
+      },
+      {
+        "start": 385850,
+        "end": 390350,
+        "text": "just check out polyglots' YouTube channels and websites and get inspiration from them.",
+        "translation": "就去看看多语者的 YouTube 频道和网站，从中找找灵感。"
+      },
+      {
+        "start": 390350,
+        "end": 394850,
+        "text": "If it works for them, it will most probably work for you too.",
+        "translation": "如果某个方法对他们有效，对你很可能也有效。"
+      },
+      {
+        "start": 394850,
+        "end": 399650,
+        "text": "The third principle to follow is to create a system in your learning.",
+        "translation": "第三条原则，是把学习安排成一套固定的流程。"
+      },
+      {
+        "start": 399650,
+        "end": 403850,
+        "text": "We're all very busy and no one really has time to learn a language today.",
+        "translation": "我们都很忙，如今谁也没有现成的时间来学语言。"
+      },
+      {
+        "start": 403850,
+        "end": 407850,
+        "text": "But we can create that time if we just plan a bit ahead.",
+        "translation": "不过，只要提前做一点安排，就能腾出时间。"
+      },
+      {
+        "start": 407850,
+        "end": 411350,
+        "text": "Can you wake up 15 minutes earlier than you normally do?",
+        "translation": "你能比平常早起十五分钟吗？"
+      },
+      {
+        "start": 411350,
+        "end": 414200,
+        "text": "That would be the perfect time to revise some vocabulary.",
+        "translation": "这段时间很适合复习几个单词。"
+      },
+      {
+        "start": 414200,
+        "end": 418350,
+        "text": "Can you listen to a podcast on your way to work while driving?",
+        "translation": "你能在开车上班的路上听播客吗？"
+      },
+      {
+        "start": 418350,
+        "end": 421700,
+        "text": "Well, that would be great to get some listening experience.",
+        "translation": "那是积累听力经验的好机会。"
+      },
+      {
+        "start": 421700,
+        "end": 425350,
+        "text": "There are so many things we can do without even planning that extra time,",
+        "translation": "我们有很多事可以顺手做，连额外安排时间都不需要，"
+      },
+      {
+        "start": 425350,
+        "end": 429350,
+        "text": "such as listening to podcasts on our way to work or doing our household chores.",
+        "translation": "比如在上班途中或做家务时听播客。"
+      },
+      {
+        "start": 429350,
+        "end": 432700,
+        "text": "The important thing is to create a plan in the learning.",
+        "translation": "重要的是给学习定一个计划。"
+      },
+      {
+        "start": 432700,
+        "end": 437250,
+        "text": "\"I will practice speaking every Tuesday and Thursday with a friend for 20 minutes.",
+        "translation": "「每周二和周四，我要和朋友练二十分钟口语。"
+      },
+      {
+        "start": 437250,
+        "end": 441850,
+        "text": "I will listen to a YouTube video while having breakfast.\"",
+        "translation": "吃早餐时，我要听一段 YouTube 视频。」"
+      },
+      {
+        "start": 441850,
+        "end": 445850,
+        "text": "If you create a system in your learning, you don't need to find that extra time,",
+        "translation": "一旦学习有了固定安排，你就不必再专门找时间，"
+      },
+      {
+        "start": 445850,
+        "end": 449850,
+        "text": "because it will become a part of your everyday life.",
+        "translation": "因为它会成为你日常生活的一部分。"
+      },
+      {
+        "start": 449850,
+        "end": 456550,
+        "text": "And finally, if you want to learn a language fluently, you need also a bit of patience.",
+        "translation": "最后，如果你想把一门语言学到流利，还需要一点耐心。"
+      },
+      {
+        "start": 456550,
+        "end": 459200,
+        "text": "It's not possible to learn a language within two months,",
+        "translation": "两个月内学会一门语言是不可能的，"
+      },
+      {
+        "start": 459200,
+        "end": 462850,
+        "text": "but it's definitely possible to make a visible improvement in two months,",
+        "translation": "但两个月内取得看得见的进步，完全有可能，"
+      },
+      {
+        "start": 462850,
+        "end": 466850,
+        "text": "if you learn in small chunks every day in a way that you enjoy.",
+        "translation": "只要每天学一小点，方法又是你喜欢的。"
+      },
+      {
+        "start": 466850,
+        "end": 470700,
+        "text": "And there is nothing that motivates us more than our own success.",
+        "translation": "没什么比自己的成功更能激励我们。"
+      },
+      {
+        "start": 470700,
+        "end": 477000,
+        "text": "I vividly remember the moment when I understood the first joke in German when watching \"Friends.\"",
+        "translation": "我清楚地记得第一次看懂德语版《老友记》里的一个笑话时的情景。"
+      },
+      {
+        "start": 477000,
+        "end": 481850,
+        "text": "I was so happy and motivated that I just kept on watching that day two more episodes,",
+        "translation": "我既开心又有动力，那天一口气又看了两集。"
+      },
+      {
+        "start": 481850,
+        "end": 487150,
+        "text": "and as I kept watching, I had more and more of those moments of understanding,",
+        "translation": "继续看下去之后，我听懂的时刻越来越多。"
+      },
+      {
+        "start": 487150,
+        "end": 489000,
+        "text": "these little victories, and step by step,",
+        "translation": "这些小小的胜利让我一步一步前进，"
+      },
+      {
+        "start": 489000,
+        "end": 494350,
+        "text": "I got to a level where I could use the language freely and fluently to express anything.",
+        "translation": "最终能自由、流利地用这门语言表达任何想法。"
+      },
+      {
+        "start": 494350,
+        "end": 496850,
+        "text": "This is a wonderful feeling.",
+        "translation": "这种感觉太棒了。"
+      },
+      {
+        "start": 496850,
+        "end": 501350,
+        "text": "I can't get enough of that feeling, and that's why I learn a language every two years.",
+        "translation": "我对这种感觉怎么也不会腻，所以每两年就学一门新语言。"
+      },
+      {
+        "start": 501350,
+        "end": 503350,
+        "text": "So this is the whole polyglot secret.",
+        "translation": "多语者的秘诀就是这些。"
+      },
+      {
+        "start": 503350,
+        "end": 509250,
+        "text": "Find effective methods which you can use systematically over the period of some time in a way which you enjoy,",
+        "translation": "找到自己喜欢的有效方法，并有计划地坚持一段时间，"
+      },
+      {
+        "start": 509250,
+        "end": 515350,
+        "text": "and this is how polyglots learn languages within months, not years.",
+        "translation": "这就是多语者在几个月内学会一门语言，无需花上好几年的原因。"
+      },
+      {
+        "start": 515350,
+        "end": 519350,
+        "text": "Now, some of you may be thinking, \"That's all very nice to enjoy language learning,",
+        "translation": "现在你们有些人可能在想，「学得开心当然很好，"
+      },
+      {
+        "start": 519350,
+        "end": 525350,
+        "text": "but isn't the real secret that you polyglots are just super talented and most of us aren't?\"",
+        "translation": "但真正的秘诀难道不是多语者天赋特别好，而大多数人没这天赋吗？」"
+      },
+      {
+        "start": 525350,
+        "end": 529100,
+        "text": "Well, there's one thing I haven't told you about Benny and Lucas.",
+        "translation": "关于本尼和卢卡斯，有一件事我还没告诉你们。"
+      },
+      {
+        "start": 529100,
+        "end": 534850,
+        "text": "Benny had 11 years of Irish Gaelic and five years of German at school.",
+        "translation": "本尼在学校学了十一年爱尔兰盖尔语和五年德语。"
+      },
+      {
+        "start": 534850,
+        "end": 538350,
+        "text": "He couldn't speak them at all when graduating.",
+        "translation": "毕业时，他两门语言都完全不会说。"
+      },
+      {
+        "start": 538350,
+        "end": 544850,
+        "text": "Up to the age of 21, he thought he didn't have the language gene and he could not speak another language.",
+        "translation": "直到二十一岁，他一直觉得自己没有语言天赋，学不会说另一门语言。"
+      },
+      {
+        "start": 544850,
+        "end": 547750,
+        "text": "Then he started to look for his way of learning languages,",
+        "translation": "后来他开始摸索适合自己的学法，"
+      },
+      {
+        "start": 547750,
+        "end": 551850,
+        "text": "which was speaking to native speakers and getting feedback from them,",
+        "translation": "也就是和母语者交流，从他们那里获得反馈。"
+      },
+      {
+        "start": 551850,
+        "end": 556850,
+        "text": "and today Benny can easily have a conversation in 10 languages.",
+        "translation": "如今本尼能轻松地用十种语言和人聊天。"
+      },
+      {
+        "start": 556850,
+        "end": 560350,
+        "text": "Lucas tried to learn English at school for 10 years.",
+        "translation": "卢卡斯在学校学了十年英语，"
+      },
+      {
+        "start": 560350,
+        "end": 562850,
+        "text": "He was one of the worst students in class.",
+        "translation": "成绩却是全班最差的学生之一。"
+      },
+      {
+        "start": 562850,
+        "end": 566550,
+        "text": "His friends even made fun of him and gave him a Russian textbook",
+        "translation": "他的朋友甚至拿他开玩笑，送了他一本俄语课本，"
+      },
+      {
+        "start": 566550,
+        "end": 571350,
+        "text": "as a joke because they thought he would never learn that language, or any language.",
+        "translation": "因为他们觉得他永远学不会俄语，其他语言也学不会。"
+      },
+      {
+        "start": 571350,
+        "end": 576150,
+        "text": "And then Lucas started to experiment with methods, looking for his own way to learn,",
+        "translation": "后来卢卡斯试了各种办法，寻找适合自己的学法，"
+      },
+      {
+        "start": 576150,
+        "end": 580850,
+        "text": "for example, by having Skype chat conversations with strangers.",
+        "translation": "比如在 Skype 上和陌生人聊天。"
+      },
+      {
+        "start": 580850,
+        "end": 586850,
+        "text": "And after just 10 years, Lucas is able to speak 11 languages fluently.",
+        "translation": "仅仅十年后，他已经能流利地说十一门语言。"
+      },
+      {
+        "start": 586850,
+        "end": 592850,
+        "text": "Does that sound like a miracle? Well, I see such miracles every single day.",
+        "translation": "听起来像奇迹吗？可我每天都能看到这样的奇迹。"
+      },
+      {
+        "start": 592850,
+        "end": 597750,
+        "text": "As a language mentor, I help people learn languages by themselves, and I see this every day.",
+        "translation": "我是一名语言学习导师，帮助人们自主学语言。这样的事我每天都见得到。"
+      },
+      {
+        "start": 597750,
+        "end": 601650,
+        "text": "People struggle with language learning for five, 10, even 20 years,",
+        "translation": "有人学语言学得很吃力，挣扎了五年、十年，甚至二十年，"
+      },
+      {
+        "start": 601650,
+        "end": 605850,
+        "text": "and then they suddenly take their learning into their own hands,",
+        "translation": "后来他们忽然把学习的主动权握回自己手里，"
+      },
+      {
+        "start": 605850,
+        "end": 609350,
+        "text": "start using materials which they enjoy, more effective methods,",
+        "translation": "开始使用自己喜欢的材料，尝试更有效的方法，"
+      },
+      {
+        "start": 609350,
+        "end": 614350,
+        "text": "or they start tracking their learning so that they can appreciate their own progress,",
+        "translation": "或是记录学习过程，让自己看见一点点的进步。"
+      },
+      {
+        "start": 614350,
+        "end": 621350,
+        "text": "and that's when suddenly they magically find the language talent that they were missing all their lives.",
+        "translation": "就在那时，他们忽然像变魔术一样，找到了以为自己从来没有过的语言天赋。"
+      },
+      {
+        "start": 621350,
+        "end": 624850,
+        "text": "So if you've also tried to learn a language and you gave up,",
+        "translation": "如果你也曾试着学一门语言，后来放弃了，"
+      },
+      {
+        "start": 624850,
+        "end": 633000,
+        "text": "thinking it's too difficult or you don't have the language talent, give it another try. Maybe you're also just one enjoyable method away",
+        "translation": "觉得太难或自己没有语言天赋，那就再试一次吧。也许你只差一种自己喜欢的方法，"
+      },
+      {
+        "start": 633000,
+        "end": 635000,
+        "text": "from learning that language fluently.",
+        "translation": "就能流利地说那门语言。"
+      },
+      {
+        "start": 635000,
+        "end": 638600,
+        "text": "Maybe you're just one method away from becoming a polyglot.",
+        "translation": "也许，离成为多语者，你只差一种方法。"
+      },
+      {
+        "start": 638750,
+        "end": 640500,
+        "text": "Thank you.",
+        "translation": "谢谢大家。"
+      },
+      {
+        "start": 640500,
+        "end": 645350,
+        "text": "(Applause)",
+        "translation": "（掌声）"
+      }
+    ],
+    "target": "one language after another",
+    "notes": "Lýdia Machová · TED",
+    "previousClipStart": 13250
+  },
+  {
+    "id": "ted_bilingual_brain",
+    "sourceUrl": "https://www.ted.com/talks/mia_nacamulli_the_benefits_of_a_bilingual_brain",
+    "keyPoints": [
+      "演讲区分了几类双语者，并联系语言习得年龄和方式。",
+      "演讲介绍了双语使用与脑结构、活动和注意控制之间的关系，并提醒听众，双语未必意味着更聪明。"
+    ],
+    "difficulty": "中级偏难 · 有语言学与脑科学术语，注意分类、对比和限定。",
+    "expressions": [
+      "regardless of accent or pronunciation",
+      "a matter of degree"
+    ],
+    "title": "学外语真的可以让你更聪明",
+    "english": "The benefits of a bilingual brain",
+    "topic": "语言学习",
+    "end": 303856,
+    "video": true,
+    "cues": [
+      {
+        "start": 6750,
+        "end": 12500,
+        "text": "¿Hablas español? Parlez-vous français? 你会说中文吗？",
+        "translation": "你会说西班牙语吗？你会说法语吗？你会说中文吗？"
+      },
+      {
+        "start": 12500,
+        "end": 18250,
+        "text": "If you answered “sí,” “oui,” or “会,” and you're watching this in English,",
+        "translation": "如果你回答「sí」「oui」或「会」，而且正在用英语观看这段视频，"
+      },
+      {
+        "start": 18500,
+        "end": 23500,
+        "text": "chances are you belong to the world's bilingual and multilingual majority.",
+        "translation": "那你很可能属于世界上占多数的双语或多语人群。"
+      },
+      {
+        "start": 23500,
+        "end": 25500,
+        "text": "And besides having an easier time traveling",
+        "translation": "除了旅行时更方便，"
+      },
+      {
+        "start": 25750,
+        "end": 27500,
+        "text": "or watching movies without subtitles,",
+        "translation": "或是看电影时可以不看字幕，"
+      },
+      {
+        "start": 27500,
+        "end": 29750,
+        "text": "knowing two or more languages means that",
+        "translation": "掌握两种或更多语言还意味着，"
+      },
+      {
+        "start": 29750,
+        "end": 34750,
+        "text": "your brain may actually look and work differently than those of your monolingual friends.",
+        "translation": "你的大脑在结构和运作方式上，可能与只会一种语言的朋友有所不同。"
+      },
+      {
+        "start": 34750,
+        "end": 38250,
+        "text": "So what does it really mean to know a language?",
+        "translation": "那么，究竟怎样才算掌握一门语言呢？"
+      },
+      {
+        "start": 38250,
+        "end": 46000,
+        "text": "Language ability is typically measured in two active parts, speaking and writing, and two passive parts, listening and reading.",
+        "translation": "语言能力通常从两项主动技能（说和写）和两项被动技能（听和读）来衡量。"
+      },
+      {
+        "start": 46750,
+        "end": 52250,
+        "text": "While a balanced bilingual has near equal abilities across the board in two languages,",
+        "translation": "均衡型双语者在两种语言的各项技能上水平接近，"
+      },
+      {
+        "start": 52500,
+        "end": 57000,
+        "text": "most bilinguals around the world know and use their languages in varying proportions.",
+        "translation": "但世界上大多数双语者对两种语言的掌握和使用程度各不相同。"
+      },
+      {
+        "start": 57750,
+        "end": 61750,
+        "text": "And depending on their situation and how they acquired each language,",
+        "translation": "根据他们的生活情境和习得每种语言的方式，"
+      },
+      {
+        "start": 61750,
+        "end": 65000,
+        "text": "they can be classified into three general types.",
+        "translation": "双语者大致可以分为三类。"
+      },
+      {
+        "start": 65000,
+        "end": 67750,
+        "text": "For example, let's take Gabriella,",
+        "translation": "以加布里埃拉为例，"
+      },
+      {
+        "start": 67750,
+        "end": 72000,
+        "text": "whose family immigrates to the US from Peru when she's two years old.",
+        "translation": "她两岁时随家人从秘鲁移民到美国。"
+      },
+      {
+        "start": 72000,
+        "end": 74000,
+        "text": "As a compound bilingual,",
+        "translation": "作为一名复合型双语者，"
+      },
+      {
+        "start": 74000,
+        "end": 79750,
+        "text": "Gabriella develops two linguistic codes simultaneously, with a single set of concepts,",
+        "translation": "加布里埃拉用同一套概念体系，同时发展出两套语言编码，"
+      },
+      {
+        "start": 79750,
+        "end": 84500,
+        "text": "learning both English and Spanish as she begins to process the world around her.",
+        "translation": "在开始理解身边世界的同时学习英语和西班牙语。"
+      },
+      {
+        "start": 85200,
+        "end": 90300,
+        "text": "Her teenage brother, on the other hand, might be a coordinate bilingual,",
+        "translation": "而她十几岁的哥哥可能属于并列型双语者，"
+      },
+      {
+        "start": 90300,
+        "end": 97850,
+        "text": "working with two sets of concepts, learning English in school, while continuing to speak Spanish at home and with friends.",
+        "translation": "他使用两套概念体系，在学校学英语，在家里和与朋友相处时继续说西班牙语。"
+      },
+      {
+        "start": 97850,
+        "end": 109600,
+        "text": "Finally, Gabriella's parents are likely to be subordinate bilinguals who learn a secondary language by filtering it through their primary language.",
+        "translation": "最后，加布里埃拉的父母很可能属于从属型双语者，他们借助第一语言来理解和学习第二语言。"
+      },
+      {
+        "start": 109600,
+        "end": 113500,
+        "text": "Because all types of bilingual people can become fully proficient in a language regardless of accent or pronunciation,",
+        "translation": "无论口音或发音如何，三类双语者都能够熟练掌握一门语言，"
+      },
+      {
+        "start": 113500,
+        "end": 117850,
+        "text": "the difference may not be apparent to a casual observer.",
+        "translation": "因此，随意观察可能看不出他们之间的差异。"
+      },
+      {
+        "start": 117850,
+        "end": 125350,
+        "text": "But recent advances in brain imaging technology have given neurolinguists a glimpse into how specific aspects of language learning affect the bilingual brain.",
+        "translation": "但脑成像技术的最新进展，让神经语言学家得以观察语言学习的不同方面如何影响双语者的大脑。"
+      },
+      {
+        "start": 125350,
+        "end": 130800,
+        "text": "It's well known that the brain's left hemisphere is more dominant and analytical in logical processes,",
+        "translation": "众所周知，在逻辑推理过程中，大脑左半球更占主导，也更擅长分析，"
+      },
+      {
+        "start": 130800,
+        "end": 135850,
+        "text": "while the right hemisphere is more active in emotional and social ones,",
+        "translation": "而右半球在处理情绪和社交信息时更活跃。"
+      },
+      {
+        "start": 135850,
+        "end": 139350,
+        "text": "though this is a matter of degree, not an absolute split.",
+        "translation": "不过这只是程度上的差异，并非绝对的分工。"
+      },
+      {
+        "start": 139350,
+        "end": 145850,
+        "text": "The fact that language involves both types of functions while lateralization develops gradually with age,",
+        "translation": "语言涉及两种半球功能，而大脑的功能侧化会随着年龄增长逐渐形成，"
+      },
+      {
+        "start": 145850,
+        "end": 148350,
+        "text": "has led to the critical period hypothesis.",
+        "translation": "由此产生了语言习得的关键期假说。"
+      },
+      {
+        "start": 148350,
+        "end": 153950,
+        "text": "According to this theory, children learn languages more easily because the plasticity of",
+        "translation": "根据这一理论，儿童学习语言更容易，因为"
+      },
+      {
+        "start": 153950,
+        "end": 158850,
+        "text": "their developing brains lets them use both hemispheres in language acquisition,",
+        "translation": "他们仍在发育的大脑具有可塑性，让他们能动用两个半球习得语言，"
+      },
+      {
+        "start": 158850,
+        "end": 165350,
+        "text": "while in most adults, language is lateralized to one hemisphere, usually the left.",
+        "translation": "而大多数成人的语言功能集中在一个半球，通常是左半球。"
+      },
+      {
+        "start": 165350,
+        "end": 174350,
+        "text": "If this is true, learning a language in childhood may give you a more holistic grasp of its social and emotional contexts.",
+        "translation": "如果这一理论成立，童年学语言或许能让你更全面地理解它的社会语境和情感语境。"
+      },
+      {
+        "start": 174350,
+        "end": 177350,
+        "text": "Conversely, recent research showed that people who learned a second language in adulthood",
+        "translation": "反过来，近期研究表明，成年后学习第二语言的人，"
+      },
+      {
+        "start": 177350,
+        "end": 186100,
+        "text": "exhibit less emotional bias and a more rational approach when confronting problems in the second language than in their native one.",
+        "translation": "在用第二语言处理问题时，比使用母语时更少受情绪偏见影响，也更理性。"
+      },
+      {
+        "start": 186100,
+        "end": 192950,
+        "text": "But regardless of when you acquire additional languages, being multilingual gives your brain some remarkable advantages.",
+        "translation": "但无论何时习得其他语言，多语能力都会给大脑带来一些显著益处。"
+      },
+      {
+        "start": 192950,
+        "end": 194350,
+        "text": "Some of these are even visible,",
+        "translation": "其中有些变化甚至能直接观察到，"
+      },
+      {
+        "start": 194350,
+        "end": 199700,
+        "text": "such as higher density of the grey matter that contains most of your brain's neurons and synapses,",
+        "translation": "例如灰质密度更高。大脑的大部分神经元和突触都在灰质中。"
+      },
+      {
+        "start": 199700,
+        "end": 204000,
+        "text": "and more activity in certain regions when you engage a second language.",
+        "translation": "使用第二语言时，大脑的某些区域也更活跃。"
+      },
+      {
+        "start": 204000,
+        "end": 208700,
+        "text": "The heightened workout a bilingual brain receives throughout its life",
+        "translation": "双语者的大脑一生都在接受更多锻炼，"
+      },
+      {
+        "start": 208700,
+        "end": 211650,
+        "text": "can also help delay the onset of diseases, like Alzheimer's and dementia by as much as five years.",
+        "translation": "这或许还能将阿尔茨海默病等痴呆相关疾病的发病时间推迟多达五年。"
+      },
+      {
+        "start": 211650,
+        "end": 217350,
+        "text": "The idea of major cognitive benefits to bilingualism may seem intuitive now,",
+        "translation": "如今，双语能显著提升认知能力的观点似乎很容易理解，"
+      },
+      {
+        "start": 217350,
+        "end": 221850,
+        "text": "but it would have surprised earlier experts.",
+        "translation": "但早年的专家听到这一点会感到意外。"
+      },
+      {
+        "start": 221850,
+        "end": 225850,
+        "text": "Before the 1960s, bilingualism was considered a handicap that slowed a child's development",
+        "translation": "20 世纪 60 年代以前，人们认为双语会阻碍儿童发展，"
+      },
+      {
+        "start": 225850,
+        "end": 233850,
+        "text": "by forcing them to spend too much energy distinguishing between languages, a view based largely on flawed studies.",
+        "translation": "因为他们不得不花太多精力区分不同语言。这种观点主要来自有缺陷的研究。"
+      },
+      {
+        "start": 233850,
+        "end": 243200,
+        "text": "And while a more recent study did show that reaction times and errors increase for some bilingual students in cross-language tests,",
+        "translation": "虽然一项较新的研究确实发现，有些双语学生在跨语言测试中反应变慢，错误也变多，"
+      },
+      {
+        "start": 243200,
+        "end": 246850,
+        "text": "it also showed that the effort and attention needed to switch between languages triggered more activity in,",
+        "translation": "但研究也发现，切换语言所需的努力和注意力会提高大脑特定区域的活动，"
+      },
+      {
+        "start": 246850,
+        "end": 251350,
+        "text": "and potentially strengthened, the dorsolateral prefrontal cortex.",
+        "translation": "还有可能强化这个区域，也就是背外侧前额叶皮层。"
+      },
+      {
+        "start": 251350,
+        "end": 258500,
+        "text": "This is the part of the brain that plays a large role in executive function,",
+        "translation": "大脑的这个区域对于执行功能很重要，"
+      },
+      {
+        "start": 258500,
+        "end": 262850,
+        "text": "problem solving, switching between tasks, and focusing while filtering out irrelevant information.",
+        "translation": "比如解决问题、在任务之间切换，以及过滤无关信息、保持专注。"
+      },
+      {
+        "start": 262850,
+        "end": 269450,
+        "text": "So, while bilingualism may not necessarily make you smarter, it does make your brain more healthy,",
+        "translation": "所以，双语虽然未必会让你更聪明，却能让大脑更健康，"
+      },
+      {
+        "start": 269450,
+        "end": 275350,
+        "text": "complex and actively engaged, and even if you didn't have the good fortune of learning a second language as a child,",
+        "translation": "使它更加复杂、活跃。即使小时候没有机会学第二语言，"
+      },
+      {
+        "start": 275350,
+        "end": 283500,
+        "text": "it's never too late to do yourself a favor and make the linguistic leap from, \"Hello,\" to, \"Hola,\" \"Bonjour\" or “你好”",
+        "translation": "现在开始也来得及。迈出学习语言的一步，把「Hello」变成「Hola」「Bonjour」或「你好」。"
+      },
+      {
+        "start": 283500,
+        "end": 287450,
+        "text": "because when it comes to our brains a little exercise can go a long way.",
+        "translation": "因为哪怕只给大脑一点锻炼，也能产生长远的影响。"
+      }
+    ],
+    "target": "in varying proportions",
+    "notes": "Mia Nacamulli · TED-Ed",
+    "previousClipStart": 6000
+  },
+  {
+    "id": "ted_play_business",
+    "sourceUrl": "https://www.ted.com/talks/martin_reeves_why_play_is_essential_for_business",
+    "keyPoints": [
+      "竞争优势消退得更快，企业需要持续重新想象自己的业务。",
+      "演讲者用想象游戏帮助团队跳出既有思维，检视脆弱之处并探索新策略。"
+    ],
+    "difficulty": "中级偏难 · 通过故事和商业案例论证，注意例子如何支持观点。",
+    "expressions": [
+      "competitive advantage fades away",
+      "stretch their thinking"
+    ],
+    "title": "为什么游戏是商业的基础",
+    "english": "Why play is essential for business",
+    "topic": "商业",
+    "end": 669504,
+    "video": true,
+    "cues": [
+      {
+        "start": 4250,
+        "end": 7500,
+        "text": "Have you ever trodden on a Lego brick in your bare feet?",
+        "translation": "你有没有光脚踩到过乐高积木？"
+      },
+      {
+        "start": 8500,
+        "end": 11250,
+        "text": "You're tiptoeing through your lounge late at night,",
+        "translation": "深夜，你踮着脚穿过客厅，"
+      },
+      {
+        "start": 11250,
+        "end": 13750,
+        "text": "and suddenly that stabbing pain,",
+        "translation": "突然感到一阵刺痛，"
+      },
+      {
+        "start": 13750,
+        "end": 14750,
+        "text": "the expletives",
+        "translation": "忍不住骂出声，"
+      },
+      {
+        "start": 14750,
+        "end": 16750,
+        "text": "and the inevitable question:",
+        "translation": "接着总会冒出那个问题："
+      },
+      {
+        "start": 16750,
+        "end": 19500,
+        "text": "“Why do we have so much of this stuff all over the place?”",
+        "translation": "「怎么哪儿都是这玩意儿？」"
+      },
+      {
+        "start": 19750,
+        "end": 21250,
+        "text": "Well, that's really quite simple.",
+        "translation": "其实原因很简单。"
+      },
+      {
+        "start": 21500,
+        "end": 23250,
+        "text": "Your kids love playing with it,",
+        "translation": "你的孩子喜欢玩乐高，"
+      },
+      {
+        "start": 23250,
+        "end": 24500,
+        "text": "so you buy more.",
+        "translation": "于是不停地买。"
+      },
+      {
+        "start": 25250,
+        "end": 26250,
+        "text": "And a confession:",
+        "translation": "我也坦白一件事："
+      },
+      {
+        "start": 26250,
+        "end": 28750,
+        "text": "I love to watch my kids play with Lego.",
+        "translation": "我喜欢看孩子玩乐高。"
+      },
+      {
+        "start": 30000,
+        "end": 34000,
+        "text": "Especially good is when I see them inventing their own rules",
+        "translation": "特别是看到他们发明自己的规则，"
+      },
+      {
+        "start": 34000,
+        "end": 35000,
+        "text": "and their own worlds.",
+        "translation": "创造自己的世界时。"
+      },
+      {
+        "start": 36500,
+        "end": 38000,
+        "text": "So here are my daughters,",
+        "translation": "这是我的女儿们，"
+      },
+      {
+        "start": 38000,
+        "end": 39250,
+        "text": "last Saturday,",
+        "translation": "上周六，"
+      },
+      {
+        "start": 39250,
+        "end": 42000,
+        "text": "making something out of different kits",
+        "translation": "她们拿不同套装里的零件"
+      },
+      {
+        "start": 42000,
+        "end": 43250,
+        "text": "and pieces of string",
+        "translation": "和一些绳子，"
+      },
+      {
+        "start": 43250,
+        "end": 46000,
+        "text": "and pieces of wood and dolls and other objects.",
+        "translation": "再加上木块、玩偶和其他东西，拼出了一件作品。"
+      },
+      {
+        "start": 46000,
+        "end": 47500,
+        "text": "And I asked them, “What is it?”",
+        "translation": "我问她们：「这是什么？」"
+      },
+      {
+        "start": 47750,
+        "end": 52000,
+        "text": "And they said to me, “Dad, of course it's a princess flying on a dragon",
+        "translation": "她们说：「爸爸，这当然是一位公主骑着龙，"
+      },
+      {
+        "start": 52000,
+        "end": 54000,
+        "text": "to visit farm animals in New York.”",
+        "translation": "去纽约看农场里的动物呀。」"
+      },
+      {
+        "start": 55000,
+        "end": 56500,
+        "text": "Of course, what else could it be?",
+        "translation": "当然了，还能是什么呢？"
+      },
+      {
+        "start": 59000,
+        "end": 61000,
+        "text": "Kids at play inspire me.",
+        "translation": "孩子们玩耍的样子给了我启发。"
+      },
+      {
+        "start": 61250,
+        "end": 63500,
+        "text": "They're not afraid to ask, “What if”",
+        "translation": "她们敢问「如果……会怎样？」"
+      },
+      {
+        "start": 63500,
+        "end": 64500,
+        "text": "and “Why not?”",
+        "translation": "也敢问「为什么不呢？」"
+      },
+      {
+        "start": 65000,
+        "end": 68750,
+        "text": "But what kids implicitly know that adults tend to forget",
+        "translation": "但孩子们心里明白一件大人常常忘记的事："
+      },
+      {
+        "start": 69000,
+        "end": 71000,
+        "text": "is that play isn't just about fun.",
+        "translation": "玩耍的意义远不止于好玩。"
+      },
+      {
+        "start": 71500,
+        "end": 77000,
+        "text": "Now, as a biologist, I know that play is spontaneous and pleasurable,",
+        "translation": "作为生物学家，我知道玩耍出于自发，也让人开心，"
+      },
+      {
+        "start": 77000,
+        "end": 80000,
+        "text": "as you can see by the smiles in this photograph,",
+        "translation": "看看照片里她们的笑容就知道了。"
+      },
+      {
+        "start": 80000,
+        "end": 83750,
+        "text": "but also, it accelerates and derisks learning.",
+        "translation": "但它还能让人学得更快，并降低试错的风险。"
+      },
+      {
+        "start": 84250,
+        "end": 86850,
+        "text": "It helps kids to try out new behaviors,",
+        "translation": "它让孩子尝试新的行为，"
+      },
+      {
+        "start": 86850,
+        "end": 95850,
+        "text": "to refine those behaviors and to imagine what is not but what could be or what will be.",
+        "translation": "改进这些行为，并想象尚未出现、将来有可能或终将出现的事物。"
+      },
+      {
+        "start": 95850,
+        "end": 100150,
+        "text": "As a business strategist dealing with adults, I still recommend play.",
+        "translation": "作为一名与成年人打交道的商业战略顾问，我依然推荐玩耍。"
+      },
+      {
+        "start": 100150,
+        "end": 106600,
+        "text": "In fact, play in business is not just possible, I’d argue that it’s essential and even urgent.",
+        "translation": "我认为，在商业中玩耍完全可行，而且必不可少，甚至刻不容缓。"
+      },
+      {
+        "start": 106600,
+        "end": 114800,
+        "text": "And here’s why. Competitive advantage fades away faster than any time in recent memory.",
+        "translation": "原因在于，竞争优势消失的速度比近年来任何时候都快。"
+      },
+      {
+        "start": 114800,
+        "end": 118850,
+        "text": "In the 1980s, if you had a performance edge over your competitors,",
+        "translation": "在 20 世纪 80 年代，如果你的经营表现优于竞争对手，"
+      },
+      {
+        "start": 118850,
+        "end": 124850,
+        "text": "you could reasonably expect to continue being a leader for around 10 years, on average.",
+        "translation": "通常可以预期，自己平均还能领先十年左右。"
+      },
+      {
+        "start": 124850,
+        "end": 130850,
+        "text": "But now the half-life of that advantage has shrunk to just one year.",
+        "translation": "但如今，这种优势的半衰期缩短到只有一年。"
+      },
+      {
+        "start": 130850,
+        "end": 135350,
+        "text": "That means that short-lived success is actually still very common,",
+        "translation": "这意味着短暂的成功其实仍然很常见，"
+      },
+      {
+        "start": 135350,
+        "end": 140850,
+        "text": "but sustained success becomes very hard and very rare.",
+        "translation": "但想持续成功很难，能做到的企业也很少。"
+      },
+      {
+        "start": 140850,
+        "end": 145850,
+        "text": "That means that, actually, reimagination is the new execution.",
+        "translation": "换句话说，重新构想业务，已经成了执行战略的一部分。"
+      },
+      {
+        "start": 145850,
+        "end": 150850,
+        "text": "In order to stay on top, or even just to tread water and stay still,",
+        "translation": "要保持领先，甚至只求守住现有位置，"
+      },
+      {
+        "start": 150850,
+        "end": 154450,
+        "text": "you need to constantly reimagine your business.",
+        "translation": "你也需要不断重新构想自己的业务。"
+      },
+      {
+        "start": 154450,
+        "end": 161350,
+        "text": "But that’s not so simple if you already have a highly successful business model.",
+        "translation": "可如果你已经有一个非常成功的商业模式，这就没那么容易。"
+      },
+      {
+        "start": 161350,
+        "end": 167350,
+        "text": "We become prisoners of the mental models that underpin our past success.",
+        "translation": "支撑过去成功的思维模式，反而会把我们困住。"
+      },
+      {
+        "start": 167350,
+        "end": 174500,
+        "text": "In fact, I found in dealing with businesses that you can’t really stretch your strategy unless you stretch your mind.",
+        "translation": "在和企业打交道时，我发现，想拓宽战略选择，就得先拓宽思路。"
+      },
+      {
+        "start": 174500,
+        "end": 178050,
+        "text": "Now play is of course a great way of stretching your mind.",
+        "translation": "而玩耍当然是拓宽思路的好办法。"
+      },
+      {
+        "start": 178050,
+        "end": 182850,
+        "text": "Now -- I mean, there’d be no mistake,",
+        "translation": "先说清楚，"
+      },
+      {
+        "start": 182850,
+        "end": 190850,
+        "text": "I’m not suggesting literally that executives huddle around a conference table with a big pile of Lego bricks -- although I’ve done that,",
+        "translation": "我并不是提议让高管围着会议桌玩一大堆乐高积木。不过我确实这么做过，"
+      },
+      {
+        "start": 190850,
+        "end": 194800,
+        "text": "and that works too. But instead,",
+        "translation": "而且也有效。但在这里，"
+      },
+      {
+        "start": 194800,
+        "end": 201850,
+        "text": "I’ve created a series of imagination games to help executives to stretch their thinking.",
+        "translation": "我设计了一系列锻炼想象力的游戏，帮助高管拓宽思路。"
+      },
+      {
+        "start": 201850,
+        "end": 205750,
+        "text": "Would you like to play with me? Good, I'm glad you said that.",
+        "translation": "你们愿意跟我一起玩吗？好，很高兴听到这个回答。"
+      },
+      {
+        "start": 205750,
+        "end": 215250,
+        "text": "OK, so let’s supposing that you’re stuck in the rut of seeing the world through the lens of your past and current success.",
+        "translation": "假设你习惯用过去和现在的成功经验看世界，已经很难跳出这套思路。"
+      },
+      {
+        "start": 215250,
+        "end": 219050,
+        "text": "I would recommend the “Anti-Company Game,” and here’s how it works.",
+        "translation": "我推荐「反向公司游戏」。玩法是这样的。"
+      },
+      {
+        "start": 219050,
+        "end": 220850,
+        "text": "You get a piece of paper,",
+        "translation": "先拿一张纸，"
+      },
+      {
+        "start": 220850,
+        "end": 227350,
+        "text": "you create a list of everything which is essential to your strategy -- everything which underpinned your past success,",
+        "translation": "列出对你战略至关重要的所有因素，也就是支撑过去成功的一切，"
+      },
+      {
+        "start": 227350,
+        "end": 233600,
+        "text": "everything which is core and sacred -- and then you flip it.",
+        "translation": "包括那些最根本、最不容动摇的前提，然后把它们全都反过来。"
+      },
+      {
+        "start": 233600,
+        "end": 239300,
+        "text": "You create the exact mirror-image list of assumptions, and then you make the best business case for this antiself.",
+        "translation": "把每一条假设换成它的对立面，然后尽力论证，这家与你完全相反的公司为什么能赚钱。"
+      },
+      {
+        "start": 239300,
+        "end": 245300,
+        "text": "You'll be surprised at the ideas that it triggers.",
+        "translation": "这个过程激发出的点子会让你吃惊。"
+      },
+      {
+        "start": 245300,
+        "end": 250750,
+        "text": "Supposing, for example, that you’re the CEO of a hotel chain and playing the game and flipping the assumptions.",
+        "translation": "例如，假设你是一家连锁酒店的首席执行官，现在来玩这个游戏，把那些假设反过来。"
+      },
+      {
+        "start": 250750,
+        "end": 261200,
+        "text": "Let’s assume that, inconveniently, you don’t actually own any hotels or any rooms or even operate any hotels or any rooms anywhere.",
+        "translation": "我们做个有点棘手的假设：你既没有酒店或客房，也没有在任何地方经营酒店或客房。"
+      },
+      {
+        "start": 261200,
+        "end": 265450,
+        "text": "Ridiculous -- quite possibly -- but actually,",
+        "translation": "这听起来很荒唐，可能确实如此。可是，"
+      },
+      {
+        "start": 265450,
+        "end": 271350,
+        "text": "how would you know the difference between ridiculous and the merely unfamiliar, untried and uncomfortable?",
+        "translation": "你怎么分辨一个点子是真的荒唐，还是仅仅因为陌生、没人试过，让你觉得不自在？"
+      },
+      {
+        "start": 271350,
+        "end": 280350,
+        "text": "And who’s to say that something that seems impractical can’t actually become and evolve into a more powerful idea?",
+        "translation": "有些点子看似不切实际，谁又能断定它以后不会演变成更有价值的方案呢？"
+      },
+      {
+        "start": 280350,
+        "end": 287850,
+        "text": "Actually, had the executives of hotels played the “Anti-Company Game” before 2007,",
+        "translation": "如果酒店高管在 2007 年前玩过「反向公司游戏」，"
+      },
+      {
+        "start": 287850,
+        "end": 293450,
+        "text": "they might have been able to foresee the appearance of Airbnb,",
+        "translation": "也许就能预见爱彼迎的出现。"
+      },
+      {
+        "start": 293450,
+        "end": 302350,
+        "text": "the hotel-less hospitality company, and they might have been able to stave off disruption by preemptively disrupting themselves.",
+        "translation": "爱彼迎这家住宿企业没有自己的酒店，高管们本可以抢先改变自己的模式，免于被别人颠覆。"
+      },
+      {
+        "start": 302350,
+        "end": 306850,
+        "text": "Let’s play another game: “The Maverick Game.”",
+        "translation": "再来玩一个游戏，叫「异类公司游戏」。"
+      },
+      {
+        "start": 306850,
+        "end": 310650,
+        "text": "On the edge of your industries -- on the edge of every industry -- are",
+        "translation": "在你的行业边缘，在每个行业的边缘，"
+      },
+      {
+        "start": 310650,
+        "end": 318000,
+        "text": "a population of maverick companies that are taking a bet against the incumbents’ business model and their view of the future.",
+        "translation": "都有一群不按常理出牌的公司。它们赌的是行业现有龙头的商业模式和未来判断会失灵。"
+      },
+      {
+        "start": 318000,
+        "end": 324850,
+        "text": "Actually, they have no choice because to be a miniature version of the incumbent would not be viable.",
+        "translation": "其实它们也别无选择，因为做龙头企业的缩小版，根本站不住脚。"
+      },
+      {
+        "start": 324850,
+        "end": 328850,
+        "text": "Now, it’s easy not to notice them -- many of them are small companies.",
+        "translation": "你很容易没注意到它们，因为很多都是小公司。"
+      },
+      {
+        "start": 328850,
+        "end": 333350,
+        "text": "It's easy to deliberately overlook them with some justification.",
+        "translation": "你甚至可以找出一些理由，故意忽略它们。"
+      },
+      {
+        "start": 333350,
+        "end": 335650,
+        "text": "Many startups disappear fairly quickly after being founded.",
+        "translation": "许多初创公司成立没多久就消失了。"
+      },
+      {
+        "start": 335650,
+        "end": 342850,
+        "text": "And it’s very, very tempting, given all of your experience in the business, to judge them.",
+        "translation": "凭你在这个行业积累的所有经验，很容易忍不住对它们评头论足。"
+      },
+      {
+        "start": 342850,
+        "end": 346350,
+        "text": "Do they know what they’re doing? Does their business model make sense?",
+        "translation": "它们知道自己在做什么吗？商业模式讲得通吗？"
+      },
+      {
+        "start": 346350,
+        "end": 348350,
+        "text": "Will they ever make any money?",
+        "translation": "它们到底能不能赚到钱？"
+      },
+      {
+        "start": 348350,
+        "end": 352850,
+        "text": "But instead of judging them from the comfort and the confidence of your position,",
+        "translation": "先放下从现有地位得来的安心和自信，暂且别下判断，"
+      },
+      {
+        "start": 352850,
+        "end": 358350,
+        "text": "try assuming that it’s they that have the right bet on the future.",
+        "translation": "试着设想，它们对未来的押注才是对的。"
+      },
+      {
+        "start": 358350,
+        "end": 368500,
+        "text": "Think about the consequences of that for your business model. Try making the best case for their idea. Supposing, for example,",
+        "translation": "想想这会如何影响你的商业模式，再尽力为它们的点子找出最有力的理由。例如，假设"
+      },
+      {
+        "start": 368500,
+        "end": 372000,
+        "text": "that you are the CEO of a company that makes equipment",
+        "translation": "你是一家设备制造公司的首席执行官，"
+      },
+      {
+        "start": 372000,
+        "end": 374600,
+        "text": "that makes semiconductors.",
+        "translation": "你们的设备用于生产半导体。"
+      },
+      {
+        "start": 374600,
+        "end": 378000,
+        "text": "Naturally, you’d probably spend most of your time and attention",
+        "translation": "你自然可能把大部分时间和注意力"
+      },
+      {
+        "start": 378000,
+        "end": 381000,
+        "text": "on your main customer industry,",
+        "translation": "花在你们的主要客户所在的行业，"
+      },
+      {
+        "start": 381000,
+        "end": 382750,
+        "text": "the electronics industry.",
+        "translation": "也就是电子行业。"
+      },
+      {
+        "start": 382750,
+        "end": 383750,
+        "text": "And if it so happened,",
+        "translation": "如果恰巧，"
+      },
+      {
+        "start": 383750,
+        "end": 389350,
+        "text": "that a couple of maverick bioscience companies were tinkering with your patents and your technologies,",
+        "translation": "有几家不按常规出牌的生物科学公司正在试用你们的专利和技术，"
+      },
+      {
+        "start": 389350,
+        "end": 393200,
+        "text": "you might overlook that as a distraction, an irrelevance.",
+        "translation": "你或许会觉得这只会分散注意力，和自己没什么关系。"
+      },
+      {
+        "start": 393200,
+        "end": 397850,
+        "text": "But actually, Brooks Automation, a leader in the field,",
+        "translation": "但这个领域的领先企业布鲁克斯自动化却"
+      },
+      {
+        "start": 397850,
+        "end": 403350,
+        "text": "decided to take a close-up look at such a group of mavericks to see whether it could learn anything.",
+        "translation": "决定仔细研究这样一群公司，看看能学到什么。"
+      },
+      {
+        "start": 403350,
+        "end": 409050,
+        "text": "And what it realized by looking at the world through the eyes of these mavericks was that,",
+        "translation": "从这些公司的角度看问题后，布鲁克斯意识到，"
+      },
+      {
+        "start": 409050,
+        "end": 414400,
+        "text": "actually, the same techniques and technologies which can be used to handle delicate",
+        "translation": "原来，用来处理精细"
+      },
+      {
+        "start": 414400,
+        "end": 423000,
+        "text": "semiconductors can also be applied to other fragile and easily contaminated materials, like biological samples.",
+        "translation": "半导体的技术和工艺，也能用于处理其他脆弱、容易受污染的材料，例如生物样本。"
+      },
+      {
+        "start": 423000,
+        "end": 426850,
+        "text": "And puzzling on the significance of this,",
+        "translation": "仔细琢磨这意味着什么之后，"
+      },
+      {
+        "start": 426850,
+        "end": 434850,
+        "text": "they reimagined how to handle and store and transport and label and identify biological samples.",
+        "translation": "他们重新设想了如何处理、储存、运输、标记和识别生物样本。"
+      },
+      {
+        "start": 434850,
+        "end": 442350,
+        "text": "In fact, they became a successful pioneer in the new industry of automated biobanking.",
+        "translation": "他们成了自动化生物样本库这一新兴行业中成功的先行者。"
+      },
+      {
+        "start": 442350,
+        "end": 449850,
+        "text": "So successful, in fact, that just a couple of days ago, they announced that this was now their core business moving forwards.",
+        "translation": "他们做得非常成功，就在几天前还宣布，今后这将成为公司的核心业务。"
+      },
+      {
+        "start": 449850,
+        "end": 460850,
+        "text": "It’s only by focusing on these anomalous mavericks that they could see their own path to renewed success and growth.",
+        "translation": "正是因为关注了这些不循常规的公司，他们才看到了重获成功与增长的道路。"
+      },
+      {
+        "start": 460850,
+        "end": 465350,
+        "text": "Now, not everything in business goes according to plan.",
+        "translation": "商业中并非每件事都会按计划发展。"
+      },
+      {
+        "start": 465350,
+        "end": 469350,
+        "text": "In fact, sometimes the plans go horribly awry. But you know what?",
+        "translation": "有时计划会出大岔子。可你知道吗？"
+      },
+      {
+        "start": 469350,
+        "end": 472100,
+        "text": "That can be a source of inspiration, too.",
+        "translation": "这也能成为灵感的来源。"
+      },
+      {
+        "start": 472100,
+        "end": 477850,
+        "text": "To find out how, let’s play the “Pre-Mortem Game.”",
+        "translation": "想知道怎么做，我们来玩「事前验尸游戏」。"
+      },
+      {
+        "start": 477850,
+        "end": 484350,
+        "text": "So your role in this game is to write ...",
+        "translation": "你在游戏中的任务是写下……"
+      },
+      {
+        "start": 484350,
+        "end": 491350,
+        "text": "the obituary for your company, which is going to fail with 100 percent certainty in five years’ time.",
+        "translation": "一份给自己公司的讣告。假设公司五年后一定会倒闭。"
+      },
+      {
+        "start": 491350,
+        "end": 497350,
+        "text": "What is the cause of death? What will have been the point of failure?",
+        "translation": "它的死因是什么？会在哪个环节出问题？"
+      },
+      {
+        "start": 497350,
+        "end": 502350,
+        "text": "Why will it have failed? How will it have failed?",
+        "translation": "它为什么失败？又会以怎样的方式失败？"
+      },
+      {
+        "start": 502350,
+        "end": 507850,
+        "text": "The challenge here is that it’s easy to be seduced into the baseline fallacy.",
+        "translation": "难点在于，人很容易落入「基线谬误」。"
+      },
+      {
+        "start": 507850,
+        "end": 512850,
+        "text": "The baseline fallacy is the idea that it’s the current business model which is the low-risk bet.",
+        "translation": "所谓基线谬误，就是认为沿用现有商业模式风险最低。"
+      },
+      {
+        "start": 512850,
+        "end": 517200,
+        "text": "And of course that tends to be true until it isn’t true,",
+        "translation": "在这个判断失效之前，它往往是成立的。"
+      },
+      {
+        "start": 517200,
+        "end": 522350,
+        "text": "at which point it’s probably too late to do anything about it.",
+        "translation": "可等到失效时，大概已经来不及做什么了。"
+      },
+      {
+        "start": 522350,
+        "end": 524350,
+        "text": "Now, your employees are an early-warning indicator.",
+        "translation": "你的员工可以为你提供早期预警。"
+      },
+      {
+        "start": 524350,
+        "end": 529850,
+        "text": "They will have intuitions if the model begins to slip, but it’s very hard for them to speak up.",
+        "translation": "当商业模式开始失灵，他们会有所察觉，但开口很难。"
+      },
+      {
+        "start": 529850,
+        "end": 537350,
+        "text": "And it’s even taboo for them to speak up when the business model is under pressure.",
+        "translation": "商业模式面临压力时，提出质疑甚至会成为忌讳。"
+      },
+      {
+        "start": 537350,
+        "end": 543150,
+        "text": "But when executives create playgrounds -- spaces for the safe exploration of alternatives and",
+        "translation": "但如果高管提供一个可以放心探索其他方案"
+      },
+      {
+        "start": 543150,
+        "end": 548550,
+        "text": "alternative scenarios -- then you get to tap into your employees’ considerable experience about",
+        "translation": "和不同情景的空间，就有机会利用员工积累的大量经验，"
+      },
+      {
+        "start": 548550,
+        "end": 554850,
+        "text": "the vulnerabilities and the weak spots and the blind spots of your company.",
+        "translation": "看清企业的漏洞、弱点和盲区。"
+      },
+      {
+        "start": 554850,
+        "end": 559850,
+        "text": "Does anyone remember visiting recently one of these gorgeous marble palaces? No?",
+        "translation": "有人记得最近去过这种金碧辉煌的大理石宫殿吗？没有？"
+      },
+      {
+        "start": 559850,
+        "end": 565850,
+        "text": "It’s probably been a while since we visited the local banking branch.",
+        "translation": "我们可能已经很久没去过附近的银行网点了。"
+      },
+      {
+        "start": 565850,
+        "end": 570350,
+        "text": "Had bricks-and-mortar banks played the “Pre-Mortem Game,”",
+        "translation": "如果实体银行玩过「事前验尸游戏」，"
+      },
+      {
+        "start": 570350,
+        "end": 579850,
+        "text": "perhaps they would have heard their employees expressing some concerns about the gradually dwindling flow of customers to local branches.",
+        "translation": "也许就能听见员工对网点客流逐渐减少的担忧。"
+      },
+      {
+        "start": 579850,
+        "end": 583750,
+        "text": "And perhaps they would have been slightly less taken by surprise",
+        "translation": "这样一来，当它们遇到下面的情况时，可能也不会那么吃惊："
+      },
+      {
+        "start": 583750,
+        "end": 585750,
+        "text": "when companies like Nubank,",
+        "translation": "像 Nubank 这样的公司，"
+      },
+      {
+        "start": 585750,
+        "end": 587750,
+        "text": "a digital native,",
+        "translation": "从一开始就是数字银行，"
+      },
+      {
+        "start": 587750,
+        "end": 591000,
+        "text": "seized, very rapidly indeed, on that opportunity",
+        "translation": "它迅速抓住了这个机会，"
+      },
+      {
+        "start": 591000,
+        "end": 595000,
+        "text": "to convince, to date, more than 40 million Latin Americans",
+        "translation": "截至演讲时，已让超过四千万拉丁美洲人相信，"
+      },
+      {
+        "start": 595000,
+        "end": 598000,
+        "text": "that in-person transactions in real buildings",
+        "translation": "到实体网点当面办理交易，"
+      },
+      {
+        "start": 598000,
+        "end": 601850,
+        "text": "were a quaint but obsolete relic of the past.",
+        "translation": "虽有几分怀旧的味道，却早已过时。"
+      },
+      {
+        "start": 601850,
+        "end": 605850,
+        "text": "It’s only when you bring your vulnerabilities into full view in this way",
+        "translation": "只有像这样把自身的弱点摆到明处，"
+      },
+      {
+        "start": 605850,
+        "end": 611050,
+        "text": "that you may be motivated to reimagine your business and to do so in a robust manner.",
+        "translation": "你才可能有动力重新构想业务，并让新的模式更经得起考验。"
+      },
+      {
+        "start": 611050,
+        "end": 616200,
+        "text": "It’s why the Roman Catholic Church invented the role,",
+        "translation": "这也是罗马天主教会设立这样一个职位的原因。"
+      },
+      {
+        "start": 616200,
+        "end": 623050,
+        "text": "the position of the Devil’s advocate in the 16th century to test the future consequences of its decisions to appoint new saints.",
+        "translation": "16 世纪，教会设立了「魔鬼代言人」，用来推演册封新圣徒可能带来的后果。"
+      },
+      {
+        "start": 623050,
+        "end": 630350,
+        "text": "They did that by imagining what would Satan say or propose or counterpropose,",
+        "translation": "他们会设想撒旦会怎么说、会提出什么主张或反对意见，"
+      },
+      {
+        "start": 630350,
+        "end": 636350,
+        "text": "in addition to the normal procedure of thinking about the big man upstairs.",
+        "translation": "这是在按常规思考上帝的看法之外，多做的一步。"
+      },
+      {
+        "start": 636350,
+        "end": 642850,
+        "text": "Now, any human being, any employee, any team and therefore any company can harness human imagination.",
+        "translation": "每个人、每位员工、每支团队，都能发挥想象力。因此，每家公司也都能。"
+      },
+      {
+        "start": 642850,
+        "end": 649350,
+        "text": "It’s a defining trait of our species. Failures to imagine in business are really failures of leadership.",
+        "translation": "想象力是人类的鲜明特征。在商业中，缺乏想象力其实是领导力的缺失。"
+      },
+      {
+        "start": 649350,
+        "end": 658650,
+        "text": "Business is a serious matter, but it should not exclude play. When leaders embrace play and imagination games,",
+        "translation": "做生意是件严肃的事，但也容得下玩耍。领导者愿意玩这些发挥想象力的游戏，"
+      },
+      {
+        "start": 658650,
+        "end": 661800,
+        "text": "they can unlock the imagination of their employees,",
+        "translation": "就能激发员工的想象力，"
+      },
+      {
+        "start": 661800,
+        "end": 665700,
+        "text": "uncover disruptive new strategies and renew their lease on the future.",
+        "translation": "发现能改变行业的新战略，让企业继续在未来占有一席之地。"
+      },
+      {
+        "start": 666250,
+        "end": 667600,
+        "text": "Thank you.",
+        "translation": "谢谢大家。"
+      },
+      {
+        "start": 667600,
+        "end": 669450,
+        "text": "(Applause)",
+        "translation": "（掌声）"
+      }
+    ],
+    "target": "adults tend to forget",
+    "notes": "Martin Reeves · TED",
+    "previousClipStart": 3750
+  }
+]

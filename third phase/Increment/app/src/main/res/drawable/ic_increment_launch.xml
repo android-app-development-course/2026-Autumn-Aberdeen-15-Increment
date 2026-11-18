@@ -1,0 +1,11 @@
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:inset="32%">
+    <layer-list>
+        <item>
+            <shape android:shape="oval">
+                <solid android:color="@color/increment_mark_fill" />
+            </shape>
+        </item>
+        <item android:drawable="@drawable/ic_increment" />
+    </layer-list>
+</inset>

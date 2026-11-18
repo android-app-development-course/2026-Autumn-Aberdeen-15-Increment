@@ -1,0 +1,9 @@
+<resources>
+    <style name="Theme.Increment.Base" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:colorAccent">@color/increment_mark_fill</item>
+        <item name="android:windowBackground">@color/increment_launch_surface</item>
+    </style>
+    <style name="Theme.Increment" parent="Theme.Increment.Base" />
+</resources>

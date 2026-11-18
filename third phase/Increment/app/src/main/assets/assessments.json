@@ -1,0 +1,114 @@
+[
+  {
+    "id": "assessment_r1",
+    "title": "R1 · 图书馆安静时段",
+    "english": "A quiet hour at the library",
+    "topic": "校园学习",
+    "start": 0,
+    "end": 64400,
+    "cues": [
+      {
+        "start": 0,
+        "end": 5424,
+        "text": "A university library recently tested a quiet hour near the end of each afternoon."
+      },
+      {
+        "start": 5624,
+        "end": 12670,
+        "text": "Students could still enter and borrow books, but phone calls and group conversations had to move to another floor."
+      },
+      {
+        "start": 12870,
+        "end": 21272,
+        "text": "The aim was to help students finish work that required concentration, without closing the library to people who needed to collaborate."
+      },
+      {
+        "start": 21472,
+        "end": 28660,
+        "text": "During the trial, some students said they finished reading assignments faster because there were fewer interruptions."
+      },
+      {
+        "start": 28860,
+        "end": 36618,
+        "text": "Others found the rule inconvenient, especially when they arrived shortly before a group meeting and had nowhere nearby to talk."
+      },
+      {
+        "start": 36818,
+        "end": 43188,
+        "text": "The librarians therefore opened an unused room for discussion and put directions at the main entrance."
+      },
+      {
+        "start": 43388,
+        "end": 50202,
+        "text": "Their early survey suggested that the quiet hour worked best when students knew where to go before it began."
+      },
+      {
+        "start": 50402,
+        "end": 56693,
+        "text": "The library plans to keep the trial for another month and collect feedback at different times of day."
+      },
+      {
+        "start": 56893,
+        "end": 64168,
+        "text": "The organisers say they will keep the rule only if students can still find a suitable place for both kinds of work."
+      }
+    ],
+    "notes": "项目原创英文材料 · 同一离线合成语音"
+  },
+  {
+    "id": "assessment_r2",
+    "title": "R2 · 校园食堂预约取餐",
+    "english": "A pickup system at the campus café",
+    "topic": "校园服务",
+    "start": 0,
+    "end": 61300,
+    "cues": [
+      {
+        "start": 0,
+        "end": 5482,
+        "text": "A campus café recently tested a pickup system during its busiest lunch hour."
+      },
+      {
+        "start": 5682,
+        "end": 13077,
+        "text": "Students could still order at the counter, but anyone who ordered in advance had to collect food from a separate shelf."
+      },
+      {
+        "start": 13277,
+        "end": 20843,
+        "text": "The aim was to shorten the line for people with limited time, without making the café harder to use for other customers."
+      },
+      {
+        "start": 21043,
+        "end": 27697,
+        "text": "During the trial, some students said they returned to class sooner because they spent less time waiting."
+      },
+      {
+        "start": 27897,
+        "end": 35701,
+        "text": "Others found the system confusing, especially when several bags looked alike and nobody was nearby to answer questions."
+      },
+      {
+        "start": 35901,
+        "end": 41391,
+        "text": "The café therefore labelled each order with a number and put directions beside the entrance."
+      },
+      {
+        "start": 41591,
+        "end": 48814,
+        "text": "An early survey suggested that the system worked best when customers knew their order number before they reached the shelf."
+      },
+      {
+        "start": 49014,
+        "end": 55108,
+        "text": "The manager plans to keep the trial for another month and collect feedback on different days of the week."
+      },
+      {
+        "start": 55308,
+        "end": 61065,
+        "text": "The café will keep the system only if both ordering options remain easy to use when it is busy."
+      }
+    ],
+    "notes": "项目原创英文材料 · 同一离线合成语音"
+  }
+]
